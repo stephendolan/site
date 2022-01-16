@@ -18,6 +18,7 @@
     "tailwindcss": "^3.0.15"
   },
   "dependencies": {
-    "@hotwired/turbo": "^7.1.0"
+    "@hotwired/turbo": "^7.1.0",
+    "alpinejs": "^3.8.1"
   }
 }

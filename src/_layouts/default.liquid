@@ -6,20 +6,20 @@
 </head>
 
 <body class="h-full">
-  <div>
-    <div class="fixed inset-0 flex z-40 md:hidden" role="dialog" aria-modal="true">
-      {% render "sidebar/mobile", metadata: site.metadata, page: page %}
+  <div x-data="{ mobileMenuOpen: false }">
+    <div x-show="mobileMenuOpen" x-transition class="fixed inset-0 flex z-40 md:hidden" role="dialog" aria-modal="true">
+      {% render "sidebar/mobile", current_url: resource.relative_url %}
     </div>
 
     <!-- Static sidebar for desktop -->
     <div class="hidden md:flex md:w-64 md:flex-col md:fixed md:inset-y-0">
-      {% render "sidebar/desktop", metadata: site.metadata, page: page %}
+      {% render "sidebar/desktop", current_url: resource.relative_url %}
     </div>
 
     <div class="md:pl-64 flex flex-col flex-1">
       <!-- Mobile hamburger menu button -->
       <div class="sticky top-0 z-10 md:hidden pl-1 pt-1 sm:pl-3 sm:pt-3 bg-gray-100">
-        {% render "sidebar/hamburger_button", metadata: site.metadata, page: page %}
+        {% render "sidebar/hamburger_button", %}
       </div>
 
       <main class="flex-1">

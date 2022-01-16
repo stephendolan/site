@@ -1,5 +1,6 @@
 import "index.css";
 import * as Turbo from "@hotwired/turbo";
+import Alpine from "alpinejs";
 
 // Uncomment the line below to add transition animations when Turbo navigates.
 // We recommend adding <meta name="turbo-cache-control" content="no-preview" />
@@ -7,6 +8,11 @@ import * as Turbo from "@hotwired/turbo";
 // on your <main> element for pages where you don't want any transition animation.
 //
 import "./turbo_transitions.js";
+
+// Optional, but can be useful for debugging.
+// window.Alpine = Alpine
+
+Alpine.start();
 
 // Import all JavaScript & CSS files from src/_components
 import components from "bridgetownComponents/**/*.{js,jsx,js.rb,css}";
