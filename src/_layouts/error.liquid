@@ -1,0 +1,12 @@
+<!doctype html>
+<html class="h-full" lang="{{ site.locale }}">
+
+<head>
+  {% render "head", metadata: site.metadata, title: page.title %}
+</head>
+
+<body class="h-full {{ page.layout }} {{ page.page_class }}">
+  {{ content }}
+</body>
+
+</html>

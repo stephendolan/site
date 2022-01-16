@@ -14,14 +14,15 @@
 # https://learnxinyminutes.com/docs/yaml/
 #
 
-url: "" # the base hostname & protocol for your site, e.g. https://example.com
+url: ""
+
+base_path: "/"
 
 permalink: pretty
-template_engine: liquid
 
-# Other options you might want to investigate:
-# 
-# base_path: "/" # the subpath of your site, e.g. /blog
-# timezone: America/Los_Angeles
-# pagination:
-#   enabled: true
+timezone: America/New_York
+
+collections:
+  projects:
+  posts:
+    output: true
