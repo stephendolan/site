@@ -1,18 +1,39 @@
 <!doctype html>
-<html lang="{{ site.locale }}">
+<html class="h-full bg-gray-100" lang="{{ site.locale }}">
 
 <head>
   {% render "head", metadata: site.metadata, title: page.title %}
 </head>
 
-<body class="{{ page.layout }} {{ page.page_class }}">
-  {% render "navbar", metadata: site.metadata, page: page %}
+<body class="h-full">
+  <div>
+    <div class="fixed inset-0 flex z-40 md:hidden" role="dialog" aria-modal="true">
+      {% render "sidebar/mobile", metadata: site.metadata, page: page %}
+    </div>
 
-  <main>
-    {{ content }}
-  </main>
+    <!-- Static sidebar for desktop -->
+    <div class="hidden md:flex md:w-64 md:flex-col md:fixed md:inset-y-0">
+      {% render "sidebar/desktop", metadata: site.metadata, page: page %}
+    </div>
 
-  {% render "footer", metadata: site.metadata %}
+    <div class="md:pl-64 flex flex-col flex-1">
+      <!-- Mobile hamburger menu button -->
+      <div class="sticky top-0 z-10 md:hidden pl-1 pt-1 sm:pl-3 sm:pt-3 bg-gray-100">
+        {% render "sidebar/hamburger_button", metadata: site.metadata, page: page %}
+      </div>
+
+      <main class="flex-1">
+        <div class="py-6">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-2xl font-semibold text-gray-900">Dashboard</h1>
+          </div>
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+            {{ content }}
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
 </body>
 
 </html>
