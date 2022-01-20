@@ -8,12 +8,12 @@
 <body class="h-full">
   <div x-data="{ mobileMenuOpen: false }">
     <div x-show="mobileMenuOpen" class="fixed inset-0 flex z-40 md:hidden" role="dialog" aria-modal="true">
-      {% render "sidebar/mobile", current_url: resource.relative_url %}
+      {% render "sidebar/mobile", current_url: resource.relative_url, collections: collections %}
     </div>
 
     <!-- Static sidebar for desktop -->
     <div class="hidden md:flex md:w-64 md:flex-col md:fixed md:inset-y-0">
-      {% render "sidebar/desktop", current_url: resource.relative_url %}
+      {% render "sidebar/desktop", current_url: resource.relative_url, collections: collections %}
     </div>
 
     <div class="md:pl-64 flex flex-col flex-1">

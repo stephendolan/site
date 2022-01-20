@@ -1,26 +1,30 @@
-{% assign linkClass = "text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-2 text-base
+{% assign linkClass = "text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-1 text-sm
 font-medium rounded-md" %}
-{% assign svgClass = "text-gray-400 group-hover:text-gray-300 mr-4 flex-shrink-0 h-6 w-6" %}
+{% assign svgClass = "text-gray-400 group-hover:text-gray-300 mr-4 flex-shrink-0 h-4 w-4" %}
 
 {% assign urlMatches = current_url | split: "/" %}
 {% assign rootUrl = urlMatches[1] | prepend: "/" %}
 
 {% if rootUrl == url %}
-{% assign linkClass = "bg-gray-900 text-white group flex items-center px-2 py-2 text-base font-medium rounded-md" %}
-{% assign svgClass = "text-gray-300 mr-4 flex-shrink-0 h-6 w-6" %}
+  {% assign linkClass = "bg-gray-900 text-white group flex items-center px-2 py-1 text-sm font-medium rounded-md" %}
+  {% assign svgClass = "text-gray-300 mr-4 flex-shrink-0 h-4 w-4" %}
 {% endif %}
 
 <a href="{{ url }}" {% if external_link %} target="_blank" {% endif %} class="{{ linkClass }}">
-  <svg class="{{ svgClass }}" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-    aria-hidden="true">
-    {{ icon_path }}
-  </svg>
-  {{ title }}
+  {%- if svg_path %}
+    <svg class="{{ svgClass }}" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+      {{ svg_path }}
+    </svg>
+  {%- elsif svg %}
+    {{ svg }}
+  {% endif %}
+
+  <span class="flex-1">{{ title }}</span>
 
   {%- if external_link %}
-  <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-    <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
-    <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
-  </svg>
+    <svg class="ml-1 h-4 w-4" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+      <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"/>
+      <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"/>
+    </svg>
   {% endif %}
 </a>

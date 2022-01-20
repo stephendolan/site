@@ -1,18 +1,22 @@
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="turbo-cache-control" content="no-preview" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="no-preview" name="turbo-cache-control"/>
 
-{% capture resource_title %}{{ title | strip_html | strip_newlines }}{% endcapture %}
+{% capture resource_title %}
+  {{ title | strip_html | strip_newlines }}
+{% endcapture %}
 <title>
   {% if resource_title != "Index" %}
-  {{ resource_title | escape }} | {{ metadata.title | escape }}
+    {{ resource_title | escape }}
+    |
+    {{ metadata.title | escape }}
   {% else %}
-  {{ metadata.title | escape }}
+    {{ metadata.title | escape }}
   {% endif %}
 </title>
 
-<meta name="description" content="{{ metadata.description }}" />
+<meta name="description" content="{{ metadata.description }}"/>
 
-<link rel="stylesheet" href="{% asset_path css %}" />
+<link rel="stylesheet" href="{% asset_path css %}"/>
 <script src="{% asset_path js %}" defer></script>
 {% live_reload_dev_js %}
