@@ -7,7 +7,7 @@
 
 <body class="h-full">
   <div x-data="{ mobileMenuOpen: false }">
-    <div x-show="mobileMenuOpen" x-transition class="fixed inset-0 flex z-40 md:hidden" role="dialog" aria-modal="true">
+    <div x-show="mobileMenuOpen" class="fixed inset-0 flex z-40 md:hidden" role="dialog" aria-modal="true">
       {% render "sidebar/mobile", current_url: resource.relative_url %}
     </div>
 

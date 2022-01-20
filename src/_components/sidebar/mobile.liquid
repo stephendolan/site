@@ -1,7 +1,7 @@
 <!-- Off-canvas menu overlay, show/hide based on off-canvas menu state. -->
 <div x-show="mobileMenuOpen" x-transition:enter="transition-opacity ease-linear duration-300"
-  x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
-  x-transition:leave="transition-opacity ease-linear duration-300" x-transition:leave-start="opacity-100"
+  x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-75"
+  x-transition:leave="transition-opacity ease-linear duration-300" x-transition:leave-start="opacity-75"
   x-transition:leave-end="opacity-0" x-on:click="mobileMenuOpen = ! mobileMenuOpen"
   class="fixed inset-0 bg-gray-600 bg-opacity-75" aria-hidden="true"></div>
 
@@ -39,6 +39,6 @@
   {% render "sidebar/session_booking_button" %}
 </div>
 
-<div x-show="mobileMenuOpen" x-transition class="flex-shrink-0 w-14">
+<div class="flex-shrink-0 w-14">
   <!-- Force sidebar to shrink to fit close icon -->
 </div>
