@@ -3,7 +3,6 @@ output
 .bridgetown-cache
 .bridgetown-metadata
 .bridgetown-webpack
-jit-refresh.css
 
 # Dependency folders
 node_modules
