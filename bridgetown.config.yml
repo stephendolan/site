@@ -32,3 +32,5 @@ collections:
     sort_direction: descending
   writing:
     output: true
+    sort_by: date
+    sort_direction: descending
