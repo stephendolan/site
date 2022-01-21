@@ -21,20 +21,20 @@
   </p>
 </div>
 
-<div class="pb-10 sm:flex space-y-3 sm:space-y-0 sm:space-x-3 justify-center lg:flex-shrink-0">
+<div class="max-w-xl mx-auto pb-10 grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-6">
   <div class="inline-flex rounded-md shadow">
-    <a class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-teal-600 hover:bg-teal-700" href="/writing">
-      I write stuff you can read
+    <a class="inline-flex w-full items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-teal-600 hover:bg-teal-700" href="/writing">
+      Read my thoughts
     </a>
   </div>
   <div class="inline-flex rounded-md shadow">
-    <a class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-teal-600 bg-gray-200 hover:bg-gray-50" href="/coaching">
-      I help with OmniFocus
+    <a class="inline-flex w-full items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-teal-600 bg-gray-200 hover:bg-white" href="/coaching">
+      Get help with OmniFocus
     </a>
   </div>
 </div>
 
-<div class="py-10 flow-root">
+<div class="flow-root">
   <ul class="-mb-8" role="list">
     {% for event in collections.timeline_events.resources %}
       {% render "timeline_event", event: event, is_last: forloop.last %}
