@@ -9,8 +9,8 @@
   <p class="mt-4 text-lg leading-6">
     I'm Stephen,
     <a class="underline hover:text-white" href="https://tuple.app" rel="noopener noreferrer" target="_blank">Tuple</a>'s Chief of Staff and
-    <a class="underline hover:text-white" href="https://gtd.com" rel="noopener noreferrer" target="_blank">Getting Things Done</a>™️
-                                                                                                                                                    practitioner.
+    <a class="underline hover:text-white" href="https://gtd.com" rel="noopener noreferrer" target="_blank">Getting Things Done</a>
+    practitioner.
   </p>
 
   <p class="mt-4 text-lg leading-6">
@@ -21,7 +21,20 @@
   </p>
 </div>
 
-<div class="flow-root">
+<div class="pb-10 sm:flex space-y-3 sm:space-y-0 sm:space-x-3 justify-center lg:flex-shrink-0">
+  <div class="inline-flex rounded-md shadow">
+    <a class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-teal-600 hover:bg-teal-700" href="/writing">
+      I write stuff you can read
+    </a>
+  </div>
+  <div class="inline-flex rounded-md shadow">
+    <a class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-teal-600 bg-gray-200 hover:bg-gray-50" href="/coaching">
+      I help with OmniFocus
+    </a>
+  </div>
+</div>
+
+<div class="py-10 flow-root">
   <ul class="-mb-8" role="list">
     {% for event in collections.timeline_events.resources %}
       {% render "timeline_event", event: event, is_last: forloop.last %}

@@ -1,0 +1,10 @@
+---
+layout: default
+---
+
+{% assign code_backtick_removal = "prose-code:before:content-none prose-code:after:content-none" %}
+{% assign code_selection = "prose-pre:select-all prose-code:select-all" %}
+
+<article class="prose prose-invert {{ code_backtick_removal }} {{ code_selection }}">
+  {{ content }}
+</article>

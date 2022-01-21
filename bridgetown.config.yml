@@ -23,6 +23,10 @@ permalink: pretty
 timezone: America/New_York
 
 defaults:
+  - scope:
+      collection: "writing"
+    values:
+      layout: "prose"
   - values:
       layout: "default"
 
