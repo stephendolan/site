@@ -10,7 +10,7 @@ font-medium rounded-md" %}
   {% assign svgClass = "text-gray-300 mr-4 flex-shrink-0 h-4 w-4" %}
 {% endif %}
 
-<a href="{{ url }}" {% if external_link %} target="_blank" {% endif %} class="{{ linkClass }}">
+<a href="{{ url }}" {% if external_link %} rel="noopener noreferrer" target="_blank" {% endif %} alt="{{ title }}" class="{{ linkClass }}">
   {%- if svg_path %}
     <svg class="{{ svgClass }}" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor" aria-hidden="true">
       {{ svg_path }}
