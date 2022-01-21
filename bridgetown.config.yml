@@ -27,6 +27,8 @@ defaults:
       layout: "default"
 
 collections:
-  projects:
+  timeline_events:
+    sort_by: date
+    sort_direction: descending
   writing:
     output: true
