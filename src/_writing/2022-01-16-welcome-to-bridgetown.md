@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Your First Post on Bridgetown"
 date: 2022-01-16 14:39:51 -0500
 categories: writing

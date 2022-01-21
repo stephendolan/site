@@ -22,6 +22,10 @@ permalink: pretty
 
 timezone: America/New_York
 
+defaults:
+  - values:
+      layout: "default"
+
 collections:
   projects:
   writing:

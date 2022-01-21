@@ -3,10 +3,10 @@
 <meta content="no-preview" name="turbo-cache-control"/>
 
 {% capture resource_title %}
-  {{ title | strip_html | strip_newlines }}
+  {{ title | strip_html | strip | truncate: 100 }}
 {% endcapture %}
 <title>
-  {% if resource_title != "Index" %}
+  {% if title != "Index" %}
     {{ resource_title | escape }}
     |
     {{ metadata.title | escape }}
