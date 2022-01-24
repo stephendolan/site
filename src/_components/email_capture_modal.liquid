@@ -35,11 +35,11 @@
 
             <div class="min-w-0 flex-1">
               <label class="sr-only" for="cta-email">Email address</label>
-              <input class="block w-full border border-transparent rounded-md px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-teal-600" id="cta-email" placeholder="Enter your email" type="email">
+              <input class="block w-full border border-transparent rounded-md px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-teal-600" id="cta-email" name="email" placeholder="Enter your email" type="email">
             </div>
 
             <div class="mt-4 sm:mt-0 sm:ml-3">
-              <button class="block w-full rounded-md border border-transparent px-5 py-3 bg-teal-500 text-base font-medium text-white shadow hover:bg-teal-400 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-teal-600 sm:px-10" type="submit">Notify me</button>
+              <button class="block w-full rounded-md border border-transparent px-5 py-3 bg-teal-500 text-base font-medium text-white shadow hover:bg-teal-400 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-teal-600 sm:px-10" type="submit" x-on:click="modalOpen = ! modalOpen">Notify me</button>
             </div>
           </form>
         </div>
