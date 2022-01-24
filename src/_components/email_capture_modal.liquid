@@ -25,7 +25,7 @@
             </p>
           </div>
 
-          <form name="writing-subscribers" class="mt-12 sm:mx-auto sm:max-w-lg sm:flex" action="{{ current_url }}" method="POST" data-netlify="true" netlify-honeypot="test-field">
+          <form class="mt-12 sm:mx-auto sm:max-w-lg sm:flex" data-netlify="true" method="POST" name="writing-subscribers" netlify-honeypot="test-field">
             <div class="hidden">
               <label>
                 Don’t fill this out if you’re human:
@@ -35,7 +35,7 @@
 
             <div class="min-w-0 flex-1">
               <label class="sr-only" for="cta-email">Email address</label>
-              <input class="block w-full border border-transparent rounded-md px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-teal-600" id="cta-email" name="email" placeholder="Enter your email" type="email">
+              <input class="block w-full border border-transparent rounded-md px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-teal-600" id="cta-email" name="email" placeholder="Enter your email" required type="email">
             </div>
 
             <div class="mt-4 sm:mt-0 sm:ml-3">
