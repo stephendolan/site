@@ -1,5 +1,4 @@
 ---
-date: 2020-06-24
 title: "Setting up TailwindCSS with a Lucky Crystal application"
 description: "Adding TailwindCSS to your Lucky apps is easy! Follow these steps to get up and running."
 ---
