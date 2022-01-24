@@ -27,6 +27,7 @@ defaults:
       collection: "writing"
     values:
       layout: "prose"
+      author: "Stephen Dolan"
   - values:
       layout: "default"
 
@@ -38,3 +39,7 @@ collections:
     output: true
     sort_by: date
     sort_direction: descending
+
+feed:
+  collections:
+    - writing

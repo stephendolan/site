@@ -2,6 +2,8 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="no-preview" name="turbo-cache-control"/>
 
+{% feed_meta %}
+
 {% capture resource_title %}
   {{ title | strip_html | strip | truncate: 100 }}
 {% endcapture %}
