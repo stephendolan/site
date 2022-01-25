@@ -5,9 +5,9 @@
 # in the templates via {{ site.metadata.myvariable }}.
 
 title: Stephen Dolan
-tagline: Chief of Staff at Tuple and GTD practitioner.
+tagline: Chief of Staff at Tuple
 description: >-
-  Stephen Dolan is the Chief of Staff at Tuple, Getting Things Done practitioner, creator of LuckyCasts.com, and core Lucky Framework team member.
+  Stephen Dolan is a Getting Things Done practitioner, Chief of Staff at Tuple, creator of LuckyCasts.com, and core Lucky Framework team member.
 
 twitter:
   username: Stephen_Dolan
