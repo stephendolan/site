@@ -8,8 +8,9 @@ jobs:
     name: Auto-merge minor and patch updates
     runs-on: ubuntu-latest
     steps:
-      - uses: koj-co/dependabot-pr-action@master
+      - uses: stephendolan/dependabot-pr-action@master
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           merge-minor: true
           merge-patch: true
+          approve-neutral-check-status: true
