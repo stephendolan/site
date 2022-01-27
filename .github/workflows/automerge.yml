@@ -1,16 +1,16 @@
-name: Auto-merge minor/patch
+name: Auto-merge
+
 on:
-  workflow_dispatch:
-  schedule:
-    - cron: "0 * * * *"
+  check_suite:
+    types:
+      - completed
+
 jobs:
-  test:
-    name: Auto-merge minor and patch updates
+  merge-me:
+    name: Merge me!
     runs-on: ubuntu-latest
     steps:
-      - uses: stephendolan/dependabot-pr-action@master
+      - name: Merge me!
+        uses: ridedott/merge-me-action@v2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          merge-minor: true
-          merge-patch: true
-          approve-neutral-check-status: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
