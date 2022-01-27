@@ -13,3 +13,4 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           merge-minor: true
           merge-patch: true
+          approve-neutral-check-status: true
