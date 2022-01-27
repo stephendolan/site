@@ -1,5 +1,3 @@
-# StephenDolan.com
-
 This is the personal site for Stephen Dolan, hosted at https://stephendolan.com
 
 ## Development
