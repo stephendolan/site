@@ -3,9 +3,10 @@ font-medium rounded-md" %}
 {% assign svgClass = "text-gray-400 group-hover:text-gray-300 mr-4 flex-shrink-0 h-4 w-4" %}
 
 {% assign urlMatches = current_url | split: "/" %}
-{% assign rootUrl = urlMatches[1] | prepend: "/" %}
+{% assign rootUrl = urlMatches[1] | remove: "/" %}
+{% assign targetUrl = url | remove: "/" %}
 
-{% if rootUrl == url %}
+{% if targetUrl == rootUrl %}
   {% assign linkClass = "bg-gray-900 text-white group flex items-center px-2 py-1 text-sm font-medium rounded-md" %}
   {% assign svgClass = "text-gray-300 mr-4 flex-shrink-0 h-4 w-4" %}
 {% endif %}
