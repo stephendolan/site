@@ -49,6 +49,8 @@ GEM
       bridgetown-core (= 1.0.0.beta1)
     bridgetown-seo-tag (5.0.0)
       bridgetown (>= 0.20.0, < 2.0)
+    bridgetown-sitemap (1.1.1)
+      bridgetown (>= 0.20, < 2.0)
     colorator (1.1.0)
     concurrent-ruby (1.1.9)
     erubi (1.10.0)
@@ -152,6 +154,7 @@ DEPENDENCIES
   bridgetown (~> 1.0.0.beta1)
   bridgetown-feed (~> 2.1)
   bridgetown-seo-tag (~> 5.0)
+  bridgetown-sitemap (~> 1.1)
   puma (~> 5.5)
   standard (~> 1.7)
 
