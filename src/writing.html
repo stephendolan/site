@@ -27,5 +27,5 @@ title: Writing
   </div>
 </div>
 
-{% assign posts = collections.writing.resources %}
+{% assign posts = collections.writing.resources | where: "published", true %}
 {% render "writing_post_list", posts: posts %}
