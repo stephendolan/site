@@ -30,7 +30,9 @@ defaults:
   - values:
       layout: "default"
       image: "/images/stephen.jpg"
-      author: "Stephen Dolan"
+      author:
+        name: Stephen Dolan
+        twitter: Stephen_Dolan
 
 collections:
   timeline_events:
