@@ -1,6 +1,7 @@
 ---
 title: "Quicker Context Switching with Tmuxinator"
 description: "The initial project setup necessary to open up a code repository can be quite complex. Tmuxinator is handy little tool that helps with your Tmux sessions and automates the initial setup of windows and commands that you run for any given project."
+category: development
 ---
 
 ## Introduction

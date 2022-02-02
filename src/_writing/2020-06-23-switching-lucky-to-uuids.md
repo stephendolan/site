@@ -1,6 +1,7 @@
 ---
 title: "Switching Scaffolded Lucky Crystal Apps to UUIDs"
 description: "By default, scaffolded Lucky apps with authentication lean on `Int64` types for user IDs, but there's often a compelling case for switching to UUIDs from the get-go."
+category: development
 ---
 
 ## Introducing...
