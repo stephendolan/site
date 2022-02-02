@@ -1,6 +1,8 @@
 ---
 title: "Quick Lucky Addons with the Bloat Gem"
 description: "Adding libraries to Lucky projects can be time-consuming and prone to errors. Leverage the Bloat gem to make this process easier and save time!"
+category: development
+featured: true
 ---
 
 ## Introduction
