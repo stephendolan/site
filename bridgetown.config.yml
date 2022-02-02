@@ -27,7 +27,6 @@ defaults:
       collection: "writing"
     values:
       layout: "prose"
-      published: true
   - values:
       layout: "default"
       image: "/images/stephen.jpg"

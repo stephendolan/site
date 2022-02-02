@@ -1,6 +1,7 @@
 ---
 title: "Setting up StimulusJS with a Lucky Crystal application"
 description: "Adding StimulusJS to your Lucky apps is easy! Follow these steps to get up and running."
+category: development
 ---
 
 ## Introduction
