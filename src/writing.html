@@ -27,12 +27,43 @@ title: Writing
   </div>
 </div>
 
-{% assign posts = collections.writing.resources %}
-<div class="bg-gray-800 shadow overflow-hidden rounded-md">
+{% assign featured_post = collections.writing.resources | where: "featured", true | first %}
+
+<div class="bg-gray-800 flex shadow overflow-hidden rounded-md">
+  <!-- https://unsplash.com/documentation#supported-parameters -->
+  {% assign unsplash_api_parameters = "?fit=crop&auto=format&h=192&w=224" %}
+  <img class="hidden lg:block h-48 w-56" src="{{ featured_post.image }}{{ unsplash_api_parameters }}">
+
+  <div class="px-4 py-4">
+    <p class="text-sm text-gray-300">
+      <time datetime="{{ post.date }}">{{ featured_post.date | date: "%B %-d, %Y" }}</time>
+    </p>
+
+    <a href="{{ featured_post.relative_url }}" class="mt-2 block">
+      <p class="text-xl font-semibold text-gray-100 line-clamp-1" title="{{ featured_post.title }}">
+        {{ featured_post.title }}
+      </p>
+
+      <p class="mt-3 text-base text-gray-300 line-clamp-2" title="{{ featured_post.description }}">
+        {{ featured_post.description }}
+      </p>
+    </a>
+
+    <div class="mt-3">
+      <a href="{{ featured_post.relative_url }}" class="text-base font-semibold text-teal-400 hover:text-teal-500">
+        Read full post
+      </a>
+    </div>
+  </div>
+</div>
+
+{% assign posts = collections.writing.resources | where: "featured", false %}
+
+<div class="mt-6 bg-gray-800 shadow overflow-hidden rounded-md">
   <ul class="divide-y divide-gray-600" role="list">
     {% for post in posts %}
       <li>
-        <a class="block hover:bg-gray-900" href="{{ post.relative_url }}">
+        <a class="block hover:bg-gray-900 hover:bg-opacity-50" href="{{ post.relative_url }}">
           <div class="px-4 py-4 flex items-center sm:px-6">
             <div class="min-w-0 flex-1 sm:flex sm:items-center sm:justify-between">
               <div class="truncate w-full">
