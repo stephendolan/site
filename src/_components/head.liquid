@@ -21,6 +21,9 @@
 
 <link rel="stylesheet" href="{% asset_path css %}"/>
 <script src="{% asset_path js %}" defer></script>
-<script data-site="VFRRSROW" defer src="https://phone-abstracted.stephendolan.com/script.js"></script>
+
+{% if bridgetown.environment == "production" %}
+  <script data-site="VFRRSROW" defer src="https://phone-abstracted.stephendolan.com/script.js"></script>
+{% endif %}
 
 {% live_reload_dev_js %}
