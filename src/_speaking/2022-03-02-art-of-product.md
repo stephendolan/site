@@ -6,4 +6,4 @@ description: I talk with Ben and Derrick about what exactly it means to be a Chi
 category: productivity
 ---
 
-{% render "speaking/spotify_podcast_embed", episode_id: "4mgJ7HZBBotAtLbwHJo5Xr" %}
+{% render "embeds/spotify_podcast", episode_id: "4mgJ7HZBBotAtLbwHJo5Xr" %}

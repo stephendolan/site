@@ -5,4 +5,4 @@ description: Coming to Crystal through the Lucky framework, I missed the massive
 category: development
 ---
 
-{% render "speaking/youtube_video_embed", video_id: "ML0hj0_cDEw", video_title: resource.data.title %}
+{% render "embeds/youtube_video", video_id: "ML0hj0_cDEw", video_title: resource.data.title %}
