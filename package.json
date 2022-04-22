@@ -10,7 +10,7 @@
     "@tailwindcss/forms": "^0.5.0",
     "@tailwindcss/line-clamp": "^0.3.1",
     "@tailwindcss/typography": "^0.5.2",
-    "esbuild": "^0.14.36",
+    "esbuild": "^0.14.38",
     "glob": "^8.0.1",
     "postcss": "^8.4.12",
     "postcss-flexbugs-fixes": "^5.0.2",
