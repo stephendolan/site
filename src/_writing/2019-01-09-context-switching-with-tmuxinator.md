@@ -10,21 +10,21 @@ Programming is a weird profession. Because our careers are built by generating p
 
 The pain point that arises from this context switching (aside from the mental trauma of never "turning off", of course), is that the initial setup necessary to open up a product can be quite complex. For example, lately I've been mainly working with three technologies; I use Ruby on Rails for more complex database-backed projects like StimAwesome, VueJS for more simple single page applications like StephenCodes, and VuePress for my project documentation websites. There are two main editor configurations that I utilize for development on these projects:
 
-## Ruby on Rails
+### Ruby on Rails
 
 - A couple of windows/panes for editing code
 - A process for running the server
 - A Docker Compose setup running the cache, background job queue, and database
 - A Sidekiq background job processor
 
-## VueJS / VuePress
+### VueJS / VuePress
 
 - A couple of windows/panes for editing code
 - A process for running the server
 
 Tmux makes the process of setting up this configuration easy with the idea of panes and windows. However, moving between two separate Tmux window/pane configurations can be a pain.
 
-# Enter - Tmuxinator
+## Enter - Tmuxinator
 
 Tmuxinator is handy little tool that helps with your Tmux sessions and automates the initial setup of windows and commands that you run for any given project.
 
@@ -94,7 +94,7 @@ function muxkill () {
 }
 ```
 
-# My Workflow
+## My Workflow
 
 With all of these tools together, switching contexts is easier than ever.
 
