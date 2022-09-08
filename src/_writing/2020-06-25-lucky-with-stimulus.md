@@ -18,7 +18,7 @@ If you want an even quicker way to set up StimulusJS, go check out my [post on t
 
 ## Setup
 
-All of these instructions can be found in their generic form in the [StimulusJS Documentation](https://stimulusjs.org/handbook/installing).
+All of these instructions can be found in their generic form in the [StimulusJS Documentation](https://stimulus.hotwired.dev/handbook/installing).
 
 Let's start by adding the `stimulus` package to our application:
 
@@ -37,7 +37,7 @@ const context = require.context("./controllers", true, /\.js$/);
 application.load(definitionsFromContext(context));
 ```
 
-That's it! Now we just need to set up some StimulusJS controllers in a new directory [according to their standards](https://stimulusjs.org/handbook/installing#controller-filenames-map-to-identifiers).
+That's it! Now we just need to set up some StimulusJS controllers in a new directory [according to their standards](https://stimulus.hotwired.dev/handbook/installing#controller-filenames-map-to-identifiers).
 
 Let's start with the directory:
 
