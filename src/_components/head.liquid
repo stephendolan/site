@@ -4,21 +4,6 @@
 {% feed_meta %}
 {% seo %}
 
-{% capture resource_title %}
-  {{ title | strip_html | strip | truncate: 100 }}
-{% endcapture %}
-<title>
-  {% if title != "Index" %}
-    {{ resource_title | escape }}
-    |
-    {{ metadata.title | escape }}
-  {% else %}
-    {{ metadata.title | escape }}
-  {% endif %}
-</title>
-
-<meta name="description" content="{{ metadata.description }}"/>
-
 <link rel="stylesheet" href="{% asset_path css %}"/>
 <script src="{% asset_path js %}" defer></script>
 
