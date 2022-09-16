@@ -43,7 +43,6 @@ collections:
     output: true
     sort_by: date
     sort_direction: descending
-    permalink: /writing/:title
   speaking:
     sort_by: date
     sort_direction: descending
