@@ -1,5 +1,5 @@
 ---
-title: "Naming projects when you do not control the outcome"
+title: "Naming projects when you don't control the outcome"
 description: "Naming projects where you don't as directly control the outcome can be challenging. As usual, David Allen's got a better way."
 category: productivity
 image: https://images.unsplash.com/photo-1577511425081-0ec68e1bd454
