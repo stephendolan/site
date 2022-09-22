@@ -50,3 +50,6 @@ collections:
 feed:
   collections:
     - writing
+
+liquid:
+  strict_filters: true
