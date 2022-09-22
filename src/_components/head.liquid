@@ -7,6 +7,8 @@
 <link rel="stylesheet" href="{% asset_path css %}"/>
 <script src="{% asset_path js %}" defer></script>
 
+<meta name="environment" content="{% bridgetown.environment %}">
+
 {% if bridgetown.environment == "production" %}
   <script data-site="VFRRSROW" defer src="https://phone-abstracted.stephendolan.com/script.js"></script>
 {% endif %}
