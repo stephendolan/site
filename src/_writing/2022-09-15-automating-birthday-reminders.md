@@ -6,7 +6,7 @@ image: https://images.unsplash.com/photo-1530103862676-de8c9debad1d
 featured: true
 ---
 
-## "Happy belated birthday!" 
+## "Happy belated birthday!"
 
 Have you experienced that moment of dread when you realize that someone you care about celebrated their birthday this past weekend, and you didn't even send them a text? You either fall on the sword with an "Oh my gosh, I can't believe I missed your birthday!" or pretend you knew all along but chose not to send a text with a "Soooo... how was your birthday this weekend?".
 
@@ -61,7 +61,8 @@ Once a day, a Google Apps Script runs at ~2 am and combs through my contacts. If
         if (birthDate.get("year") === 1604) {
           body = "They didn't have a birth year set in your Google Contacts.";
         } else {
-          body = `They'll be ${dayjs().diff(birthDate, "years")} years old.`;
+          body = `They'll be ${dayjs().diff(birthDate, "years") + 1} years old.`;
+
         }
 
         MailApp.sendEmail(recipient, subject, body);
