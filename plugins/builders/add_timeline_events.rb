@@ -10,7 +10,8 @@ class Builders::AddTimelineEvents < SiteBuilder
       Event.new(description: "Director of Account Engineering at", name: "MerchLogix", date: Date.new(2019, 3), link: "https://merchlogix.com", svg_path: users_svg),
       Event.new(description: "Joined core team of", name: "Lucky Framework", date: Date.new(2020, 10, 13), link: "https://luckyframework.org", svg_path: code_svg),
       Event.new(description: "Founded", name: "LuckyCasts", date: Date.new(2020, 12), link: "https://luckycasts.com", svg_path: video_svg),
-      Event.new(description: "Chief of Staff at", name: "Tuple", date: Date.new(2021, 8), link: "https://tuple.app", svg_path: clipboard_svg)
+      Event.new(description: "Chief of Staff at", name: "Tuple", date: Date.new(2021, 8), link: "https://tuple.app", svg_path: clipboard_svg),
+      Event.new(description: "Chief Operating Officer at", name: "Tuple", date: Date.new(2022, 10), link: "https://tuple.app", svg_path: business_svg)
     ]
 
     id = 1
@@ -52,6 +53,12 @@ class Builders::AddTimelineEvents < SiteBuilder
   def academic_cap_svg
     <<~SVG
       <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
+    SVG
+  end
+
+  def business_svg
+    <<~SVG
+      <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" />
     SVG
   end
 
