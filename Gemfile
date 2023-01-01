@@ -33,6 +33,6 @@ end
 # Puma is a Rack-compatible server used by Bridgetown
 # (you can optionally limit this to the "development" group)
 group :development do
-  gem "standard", "~> 1.16"
+  gem "standard", "~> 1.20"
   gem "puma", "~> 5.6"
 end
