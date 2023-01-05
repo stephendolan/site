@@ -3,7 +3,6 @@ title: "Automatic event reminders in OmniFocus"
 description: "Using Google Apps Script and Google Contacts, you can automatically send yourself reminders for key events in your life."
 category: productivity
 image: https://images.unsplash.com/photo-1435527173128-983b87201f4d
-featured: true
 ---
 
 ## Becoming a well-wishing, event tackling machine
@@ -17,13 +16,13 @@ Where do you keep all the miscellaneous events that you want to keep track of in
 - Setting up an annual review at work
 - Scheduling Fall and Spring AC maintenance
 
-My goal is to approach each of these with laser-like precision; people should be *amazed* at how attentive I am and *astounded* that I remember something year after year with no lapses.
+My goal is to approach each of these with laser-like precision; people should be _amazed_ at how attentive I am and _astounded_ that I remember something year after year with no lapses.
 
 There are many tools you could use to achieve this goal, and while the approach I've landed on may not work for everyone, it's a system that works perfectly for me.
 
 ## Exit: Google calendar
 
-I prescribe to the GTD methodology, so the only things on my calendar are items that *have* to happen on that date. One approach for storing all of the events I mentioned previously is to simply create a new calendar, add these events to the calendar, and the set up a 2/4-week notification using Google's build-in functionality.
+I prescribe to the GTD methodology, so the only things on my calendar are items that _have_ to happen on that date. One approach for storing all of the events I mentioned previously is to simply create a new calendar, add these events to the calendar, and the set up a 2/4-week notification using Google's build-in functionality.
 
 That works for most things, but what about odd-ball holidays that don't fall on specific dates like Easter and Thanksgiving? We might enable that beefy "US Holidays" calendar and set up notifications there, but then you're inundated with holidays you don't need to action on or missing ones that you do.
 
@@ -40,76 +39,100 @@ Once a day, a Google Apps Script runs at ~2 am and combs through a list of event
 1. Head to [your Google Apps Script dashboard](https://script.google.com/home).
 1. Make a new project.
 1. Paste in the following script, substituting out the `email_destination` user property for your own [OmniFocus inbox email](https://support.omnigroup.com/omnifocus-mail-drop/). Add your own custom events with optional years to `customHolidays`, and define the set of standard holidays you care about in `setInitialHolidays`.
-    ```javascript
-    // Pull in Moment and Moment Holiday libraries.
-    eval(UrlFetchApp.fetch('https://cdn.jsdelivr.net/npm/moment@latest').getContentText());
-    eval(UrlFetchApp.fetch('https://cdn.jsdelivr.net/npm/moment-holiday@latest').getContentText());
 
-    const userProperties = PropertiesService.getUserProperties();
-    userProperties.setProperty("advance_days", 30);
-    userProperties.setProperty("email_destination", "your-omni-address@sync.omnigroup.com");
+   ```javascript
+   // Pull in Moment and Moment Holiday libraries.
+   eval(
+     UrlFetchApp.fetch(
+       "https://cdn.jsdelivr.net/npm/moment@latest"
+     ).getContentText()
+   );
+   eval(
+     UrlFetchApp.fetch(
+       "https://cdn.jsdelivr.net/npm/moment-holiday@latest"
+     ).getContentText()
+   );
 
-    const dateToCheck = moment().add(userProperties.getProperty("advance_days"), "days");
+   const userProperties = PropertiesService.getUserProperties();
+   userProperties.setProperty("advance_days", 30);
+   userProperties.setProperty(
+     "email_destination",
+     "your-omni-address@sync.omnigroup.com"
+   );
 
-    const customHolidays = {
-      "Car Registration Due": { date: "11/4" },
-      "Marriage Anniversary": { date: "9/22", year: 2018 },
-      "Spring AC Maintenance": { date: "4/1" },
-      "Fall Heater Maintenance": { date: "10/1" }
-    };
+   const dateToCheck = moment().add(
+     userProperties.getProperty("advance_days"),
+     "days"
+   );
 
-    function addCustomHolidays() {
-      for (const [name, data] of Object.entries(customHolidays)) {
-        moment.modifyHolidays.add({[name]: data});
-      }
-    }
+   const customHolidays = {
+     "Car Registration Due": { date: "11/4" },
+     "Marriage Anniversary": { date: "9/22", year: 2018 },
+     "Spring AC Maintenance": { date: "4/1" },
+     "Fall Heater Maintenance": { date: "10/1" },
+   };
 
-    // Set this to the holidays you want to monitor from your locale:
-    // https://github.com/kodie/moment-holiday/blob/master/locale/united_states.js
-    function setInitialHolidays() {
-      moment.modifyHolidays.set([
-        "Valentine's Day",
-        "Easter Sunday",
-        "Memorial Day",
-        "Mother's Day",
-        "Father's Day",
-        "Independence Day",
-        "Labor Day",
-        "Halloween",
-        "Thanksgiving Day",
-        "Christmas Day",
-        "New Year's Eve"
-      ]);
-    }
+   function addCustomHolidays() {
+     for (const [name, data] of Object.entries(customHolidays)) {
+       moment.modifyHolidays.add({ [name]: data });
+     }
+   }
 
-    function sendEventToTaskManager(eventName) {
-        const recipient = userProperties.getProperty("email_destination");
-        const prettyDate = dateToCheck.format("MMM Do, YYYY");
-        const subject = "Event incoming! " + eventName + " on " + prettyDate + ".";
-        let body = "";
+   // Set this to the holidays you want to monitor from your locale:
+   // https://github.com/kodie/moment-holiday/blob/master/locale/united_states.js
+   function setInitialHolidays() {
+     moment.modifyHolidays.set([
+       "Valentine's Day",
+       "Easter Sunday",
+       "Memorial Day",
+       "Mother's Day",
+       "Father's Day",
+       "Independence Day",
+       "Labor Day",
+       "Halloween",
+       "Thanksgiving Day",
+       "Christmas Day",
+       "New Year's Eve",
+     ]);
+   }
 
-        if (customHolidays[eventName] !== undefined && customHolidays[eventName].year !== null) {
-            const dateClone = moment(dateToCheck);
-            const yearsFromInitialEvent = dateClone.subtract(customHolidays[eventName].year, "years").format("Y");
-            body = `This event marks ${parseInt(yearsFromInitialEvent, 10)} years!\n`;
-        }
-    
-        MailApp.sendEmail(recipient, subject, body);
-    }
+   function sendEventToTaskManager(eventName) {
+     const recipient = userProperties.getProperty("email_destination");
+     const prettyDate = dateToCheck.format("MMM Do, YYYY");
+     const subject = "Event incoming! " + eventName + " on " + prettyDate + ".";
+     let body = "";
 
-    function main() {
-        setInitialHolidays();
-        addCustomHolidays();
+     if (
+       customHolidays[eventName] !== undefined &&
+       customHolidays[eventName].year !== null
+     ) {
+       const dateClone = moment(dateToCheck);
+       const yearsFromInitialEvent = dateClone
+         .subtract(customHolidays[eventName].year, "years")
+         .format("Y");
+       body = `This event marks ${parseInt(
+         yearsFromInitialEvent,
+         10
+       )} years!\n`;
+     }
 
-        Logger.log(`Checking date '${dateToCheck.format("MMM Do, YYYY")}'`);
+     MailApp.sendEmail(recipient, subject, body);
+   }
 
-        let events = [].concat(dateToCheck.isHoliday() || []);
-        events.forEach((event) => {
-          Logger.log(`Sending a task for '${event}'.`);
-          sendEventToTaskManager(events);
-        })
-    }
-    ```
+   function main() {
+     setInitialHolidays();
+     addCustomHolidays();
+
+     Logger.log(`Checking date '${dateToCheck.format("MMM Do, YYYY")}'`);
+
+     let events = [].concat(dateToCheck.isHoliday() || []);
+     events.forEach((event) => {
+       Logger.log(`Sending a task for '${event}'.`);
+       sendEventToTaskManager(events);
+     });
+   }
+   ```
+
 1. Click "Run" in the top toolbar to make sure everything is working and accept Google's permission prompts to send emails on your behalf. It's helpful to manually set one of your events to 30 days from today to ensure items appear in your OmniFocus inbox.
 1. Click on "Triggers" on the left side of your screen, and add a new one that runs the `main` function once per day between 1 AM and 2 AM.
 
