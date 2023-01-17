@@ -52,7 +52,7 @@ I like to minimize the number of things I see in the sidebar to potentially acti
 
 ![Slack Sidebar]({{ assetPath }}/slack-sidebar.png)
 
-Another critical setting for me is to show `Unread conversations only`. This really helps to reduce clutter and focus on only the things that might be actionable at any given time.
+Another critical setting for me is to show `Unread conversations only`. This really helps to reduce clutter and focus on only the things that might be actionable at any given time. If you like having Starred conversations/channels always available, setting this on individual Sidebar Sections can be a great move, too.
 
 ## Mute agressively
 
