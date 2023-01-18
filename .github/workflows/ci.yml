@@ -15,7 +15,7 @@ jobs:
       - name: prettier
         uses: creyD/prettier_action@v4.2
         with:
-          prettier_options: --check **/*.{js,md}
+          prettier_options: --check **/*.{js,md,liquid}
       - name: standardrb
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
