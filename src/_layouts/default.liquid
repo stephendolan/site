@@ -1,39 +1,37 @@
 <!doctype html>
 <html class="h-full bg-gray-700" lang="{{ site.locale }}">
+  <head>
+    {% render 'head', metadata: site.metadata, title: page.title %}
+  </head>
 
-<head>
-  {% render "head", metadata: site.metadata, title: page.title %}
-</head>
-
-<body class="h-full">
-  <div x-data="{ mobileMenuOpen: false }">
-    <div x-show="mobileMenuOpen" class="fixed inset-0 flex z-40 md:hidden" role="dialog" aria-modal="true">
-      {% render "sidebar/mobile", current_url: resource.relative_url, collections: collections %}
-    </div>
-
-    <!-- Static sidebar for desktop -->
-    <div class="hidden md:flex md:w-64 md:flex-col md:fixed md:inset-y-0">
-      {% render "sidebar/desktop", current_url: resource.relative_url, collections: collections %}
-    </div>
-
-    <div class="md:pl-64 flex flex-col flex-1">
-      <!-- Mobile hamburger menu button -->
-      <div class="sticky top-0 z-10 md:hidden pl-1 pt-1 sm:pl-3 sm:pt-3">
-        {% render "sidebar/hamburger_button", %}
+  <body class="h-full">
+    <div x-data="{ mobileMenuOpen: false }">
+      <div x-show="mobileMenuOpen" class="fixed inset-0 flex z-40 md:hidden" role="dialog" aria-modal="true">
+        {% render 'sidebar/mobile', current_url: resource.relative_url, collections: collections %}
       </div>
 
-      <main class="flex-1 text-gray-100">
-        <div class="py-6">
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-            {{ content }}
-          </div>
+      <!-- Static sidebar for desktop -->
+      <div class="hidden md:flex md:w-64 md:flex-col md:fixed md:inset-y-0">
+        {% render 'sidebar/desktop', current_url: resource.relative_url, collections: collections %}
+      </div>
+
+      <div class="md:pl-64 flex flex-col flex-1">
+        <!-- Mobile hamburger menu button -->
+        <div class="sticky top-0 z-10 md:hidden pl-1 pt-1 sm:pl-3 sm:pt-3">
+          {% render 'sidebar/hamburger_button' %}
         </div>
-      </main>
+
+        <main class="flex-1 text-gray-100">
+          <div class="py-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+              {{ content }}
+            </div>
+          </div>
+        </main>
+      </div>
     </div>
-  </div>
 
-  {% render "scripts/twitter_widget" %}
-  {% render "scripts/savvy_cal_embed" %}
-</body>
-
+    {% render 'scripts/twitter_widget' %}
+    {% render 'scripts/savvy_cal_embed' %}
+  </body>
 </html>

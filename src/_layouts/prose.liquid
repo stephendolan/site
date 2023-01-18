@@ -2,18 +2,19 @@
 layout: default
 ---
 
-
-{% assign code_backtick_removal = "prose-code:before:content-none prose-code:after:content-none" %}
-{% assign code_selection = "prose-pre:select-all prose-code:select-all" %}
-{% assign link_hover_behavior = "hover:prose-a:text-teal-300" %}
+{% assign code_backtick_removal = 'prose-code:before:content-none prose-code:after:content-none' %}
+{% assign code_selection = 'prose-pre:select-all prose-code:select-all' %}
+{% assign link_hover_behavior = 'hover:prose-a:text-teal-300' %}
 
 <article class="prose prose-invert prose-pre:lg:-mr-96 {{ code_backtick_removal }} {{ code_selection }} {{ link_hover_behavior }}">
   <div class="text-gray-100 text-center">
     <h1 class="text-3xl font-bold mb-2">{{ page.title }}</h1>
     <p class="text-sm">
-      {{ page.date | date: "%B %e, %Y" }}
+      {{ page.date | date: '%B %e, %Y' }}
       by
-      <a href="https://twitter.com/{{ page.data.author.twitter }}" rel="noopener noreferrer" target="_blank">{{ page.data.author.name }}</a>
+      <a href="https://twitter.com/{{ page.data.author.twitter }}" rel="noopener noreferrer" target="_blank">
+        {{- page.data.author.name -}}
+      </a>
     </p>
   </div>
 

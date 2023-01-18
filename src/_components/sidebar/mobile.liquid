@@ -1,27 +1,67 @@
 <!-- Off-canvas menu overlay, show/hide based on off-canvas menu state. -->
-<div aria-hidden="true" class="fixed inset-0 bg-gray-600 bg-opacity-75" x-on:click="mobileMenuOpen = ! mobileMenuOpen" x-show="mobileMenuOpen" x-transition:enter-end="opacity-75" x-transition:enter-start="opacity-0" x-transition:enter="transition-opacity ease-linear duration-300" x-transition:leave-end="opacity-0" x-transition:leave-start="opacity-75" x-transition:leave="transition-opacity ease-linear duration-300"></div>
+<div
+  aria-hidden="true"
+  class="fixed inset-0 bg-gray-600 bg-opacity-75"
+  x-on:click="mobileMenuOpen = ! mobileMenuOpen"
+  x-show="mobileMenuOpen"
+  x-transition:enter-end="opacity-75"
+  x-transition:enter-start="opacity-0"
+  x-transition:enter="transition-opacity ease-linear duration-300"
+  x-transition:leave-end="opacity-0"
+  x-transition:leave-start="opacity-75"
+  x-transition:leave="transition-opacity ease-linear duration-300"
+></div>
 
 <!-- Off-canvas menu, show/hide based on off-canvas menu state. -->
-<div class="relative flex-1 flex flex-col max-w-xs w-full bg-gray-800" x-show="mobileMenuOpen" x-transition:enter-end="translate-x-0" x-transition:enter-start="-translate-x-full" x-transition:enter="transition ease-in-out duration-300 transform" x-transition:leave-end="-translate-x-full" x-transition:leave-start="translate-x-0" x-transition:leave="transition ease-in-out duration-300 transform">
+<div
+  class="relative flex-1 flex flex-col max-w-xs w-full bg-gray-800"
+  x-show="mobileMenuOpen"
+  x-transition:enter-end="translate-x-0"
+  x-transition:enter-start="-translate-x-full"
+  x-transition:enter="transition ease-in-out duration-300 transform"
+  x-transition:leave-end="-translate-x-full"
+  x-transition:leave-start="translate-x-0"
+  x-transition:leave="transition ease-in-out duration-300 transform"
+>
   <!-- Close button, show/hide based on off-canvas menu state. -->
-  <div class="absolute top-0 right-0 -mr-12 pt-2" x-show="mobileMenuOpen" x-transition:enter-end="opacity-100" x-transition:enter-start="opacity-0" x-transition:enter="ease-in-out duration-300" x-transition:leave-end="opacity-0" x-transition:leave-start="opacity-100" x-transition:leave="ease-in-out duration-300">
-    <button class="ml-1 flex items-center justify-center h-10 w-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" type="button" x-on:click="mobileMenuOpen = ! mobileMenuOpen">
+  <div
+    class="absolute top-0 right-0 -mr-12 pt-2"
+    x-show="mobileMenuOpen"
+    x-transition:enter-end="opacity-100"
+    x-transition:enter-start="opacity-0"
+    x-transition:enter="ease-in-out duration-300"
+    x-transition:leave-end="opacity-0"
+    x-transition:leave-start="opacity-100"
+    x-transition:leave="ease-in-out duration-300"
+  >
+    <button
+      class="ml-1 flex items-center justify-center h-10 w-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+      type="button"
+      x-on:click="mobileMenuOpen = ! mobileMenuOpen"
+    >
       <span class="sr-only">Close sidebar</span>
       <!-- Heroicon name: outline/x -->
-      <svg aria-hidden="true" class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <svg
+        aria-hidden="true"
+        class="h-6 w-6 text-white"
+        fill="none"
+        stroke="currentColor"
+        viewbox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
         <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
       </svg>
     </button>
   </div>
 
   <div class="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
-    {% render "sidebar/logo" %}
+    {% render 'sidebar/logo' %}
     <nav class="mt-5 px-2 space-y-1">
-      {% render "sidebar/navigation", current_url: current_url, collections: collections %}
+      {% render 'sidebar/navigation', current_url: current_url, collections: collections %}
     </nav>
   </div>
 
-  {% render "sidebar/session_booking_button" %}
+  {% render 'sidebar/session_booking_button' %}
 </div>
 
 <div class="flex-shrink-0 w-14">

@@ -8,9 +8,14 @@ on:
   pull_request:
 
 jobs:
-  StandardRB:
+  lint:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
+      - name: prettier
+        uses: creyD/prettier_action@v4.2
+        with:
+          prettier_options: --check **/*.{js,md}
       - name: standardrb
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
