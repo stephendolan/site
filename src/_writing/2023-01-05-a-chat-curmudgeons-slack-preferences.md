@@ -32,6 +32,8 @@ This also allows you to set section-specific visibility rules so that you don't 
 
 I set up [a simple Zapier automation](https://zapier.com/shared/229fb66f346c69369338c30fecd49c5b6e91ad4d) to send bookmarked (saved) messages to my OmniFocus inbox. This avoids the all-too-common issue where someone requests something of you in a channel, which you promptly forget as soon as you've clicked away to another notification.
 
+![Slack Notifications]({{ assetPath }}/zapier-integration.png)
+
 If you don't use OmniFocus, use an email action to send tasks to your inbox there instead!
 
 ## Modify your preferences
