@@ -11,9 +11,7 @@ featured: true
 
 ## My take on chat
 
-I don't love apps like Slack and Discord for work. I think they're great for building community and having fun, but when they're used for actually trying to get things done can end up devolving into lazier requests, disjointed decision-making, and a lack of clear accountability for actions.
-
-That said, chat apps are here to stay. We just transitioned to Slack at [Tuple](https://tuple.app), and I'm actually pretty happy with how the app feels for me. I thought it'd be useful to catalog the settings and modifications I employed along the way to end up with a clean and minimalist setup with very few notifications that looks like this:
+I don't love apps like Slack and Discord for work, but it definitely feels like they're here to stay. We just transitioned to Slack at [Tuple](https://tuple.app), and after a few tweaks I'm actually pretty happy with how the app feels for me. I thought it'd be useful to catalog the settings and modifications I employed along the way to end up with a clean and minimalist setup with very few notifications that looks like this:
 
 ![My Setup]({{ assetPath }}/slack-summary.png)
 
@@ -25,6 +23,8 @@ I utilize [Sections](https://slack.com/help/articles/360043207674-Organize-your-
 - `Teams` for channels specifically related to teams at the company, like Engineering, Sales, or Marketing.
 - `Projects` for ethereal channels related to something that has a definite ending, like a specific feature or position you're hiring for.
 - `External` for [Slack Connect](https://slack.com/connect) channels with vendors, customers, and contractors.
+
+This also allows you to set section-specific visibility rules so that you don't see all of your channels displayed all of the time.
 
 ## Ship tasks to OmniFocus
 
@@ -52,7 +52,9 @@ I like to minimize the number of things I see in the sidebar to potentially acti
 
 ![Slack Sidebar]({{ assetPath }}/slack-sidebar.png)
 
-Another critical setting for me is to show `Unread conversations only`. This really helps to reduce clutter and focus on only the things that might be actionable at any given time. If you like having Starred conversations/channels always available, setting this on individual Sidebar Sections can be a great move, too.
+Another critical setting for me is to show customized conversations per Section. This really helps to reduce clutter and focus on only the things that might be actionable at any given time. For every Section except Starred, I set them to only show Unread conversations.
+
+![Slack Section Settings]({{ assetPath }}/slack-section-settings.png)
 
 ## Mute agressively
 
