@@ -1,4 +1,8 @@
-<li class="mb-3">
+{% if is_last == false %}
+  {% assign list_classes = 'mb-5' %}
+{% endif %}
+
+<li class="{{ list_classes }}">
   <div>
     <div class="relative flex justify-center space-x-3">
       <div>
