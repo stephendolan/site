@@ -23,7 +23,7 @@ title: Writing
 
 {% assign featured_post = collections.writing.resources | where: "featured", true | first %}
 
-  <div class="bg-gray-800 flex shadow overflow-hidden rounded-md">
+  <div class="bg-gray-800 bg-opacity-80 flex shadow overflow-hidden rounded-md">
   <!-- https://unsplash.com/documentation#supported-parameters -->
   {% assign unsplash_api_parameters = "?fit=crop&auto=format&h=192&w=224" %}
   <img class="hidden lg:block h-48 w-56" src="{{ featured_post.image }}{{ unsplash_api_parameters }}">
@@ -51,7 +51,7 @@ title: Writing
   </div>
 </div>
 
-<section class="mt-6 bg-gray-800 divide-y divide-gray-600 rounded-md overflow-hidden shadow">
+<section class="mt-6 bg-gray-800 divide-y divide-gray-600 bg-opacity-80 rounded-md overflow-hidden shadow">
   <h2 class="text-xl bg-gradient-to-r from-gray-800 via-gray-800 to-blue-900 font-semibold p-4">Productivity</h2>
   {% assign productivity_posts = collections.writing.resources | where: "featured", false | where: "category", "Productivity" %}
   <ul class="divide-y divide-gray-600" role="list">
@@ -61,7 +61,7 @@ title: Writing
   </ul>
 </section>
 
-<section class="mt-6 bg-gray-800 divide-y divide-gray-600 rounded-md overflow-hidden shadow">
+<section class="mt-6 bg-gray-800 divide-y divide-gray-600 bg-opacity-80 rounded-md overflow-hidden shadow">
   <h2 class="text-xl bg-gradient-to-r from-gray-800 via-gray-800 to-emerald-900 font-semibold p-4">Development</h2>
   {% assign dev_posts = collections.writing.resources | where: "featured", false | where: "category", "Development" %}
   <ul class="divide-y divide-gray-600" role="list">
