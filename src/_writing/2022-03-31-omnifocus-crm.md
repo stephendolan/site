@@ -1,7 +1,10 @@
 ---
 title: "Using OmniFocus as a simple CRM"
 description: "If you're on a large team with many moving parts, having a CRM is an absolute necessity. But how long can you get by without one if you're a solo founder or indie hacker? Quite a while, if you've got a tool like OmniFocus at hand."
-category: productivity
+category: Productivity
+tags:
+  - OmniFocus
+  - Tooling
 image: https://images.unsplash.com/photo-1566443280617-35db331c54fb
 ---
 

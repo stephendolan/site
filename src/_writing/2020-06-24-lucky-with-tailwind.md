@@ -1,7 +1,10 @@
 ---
 title: "Setting up TailwindCSS with a Lucky Crystal application"
 description: "Adding TailwindCSS to your Lucky apps is easy! Follow these steps to get up and running."
-category: development
+category: Development
+tags:
+  - Lucky Framework
+  - TailwindCSS
 ---
 
 ## Introduction
