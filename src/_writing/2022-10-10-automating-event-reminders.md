@@ -139,6 +139,6 @@ Once a day, a Google Apps Script runs at ~2 am and combs through a list of event
 
 ## Enjoy!
 
-If you've set up everything correctly, you'll see event reminders for the things you care about flowing into OmniFocus 30 dyas ahead of time!
+If you've set up everything correctly, you'll see event reminders for the things you care about flowing into OmniFocus 30 days ahead of time!
 
 In most instances, I convert these inbox tasks to projects and get to work defining the next action to appropriately celebrate or tackle the event.
