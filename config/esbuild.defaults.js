@@ -6,7 +6,7 @@
 // when an update is applied hence we strongly recommend adding overrides to
 // `esbuild.config.js` instead of editing this file.
 //
-// Shipped with Bridgetown v1.1.0
+// Shipped with Bridgetown v1.2.0
 
 const path = require("path");
 const fsLib = require("fs");
@@ -93,7 +93,7 @@ const importGlobPlugin = () => ({
 });
 
 // Plugin for PostCSS
-const postCssPlugin = (options, configuration) => ({
+const importPostCssPlugin = (options, configuration) => ({
   name: "postcss",
   async setup(build) {
     // Process .css files with PostCSS
@@ -264,12 +264,13 @@ const bridgetownPreset = (outputFolder) => ({
           entrypoints.push([outputPath, fileSize(key)]);
         } else if (
           key.match(/index(\.js)?\.[^-.]*\.css/) &&
-          inputs.find((item) => item.match(/\.(s?css|sass)$/))
+          inputs.find((item) => item.match(/frontend.*\.(s?css|sass)$/))
         ) {
           // Special treatment for index.css
-          manifest[
-            stripPrefix(inputs.find((item) => item.match(/\.(s?css|sass)$/)))
-          ] = outputPath;
+          const input = inputs.find((item) =>
+            item.match(/frontend.*\.(s?css|sass)$/)
+          );
+          manifest[stripPrefix(input)] = outputPath;
           entrypoints.push([outputPath, fileSize(key)]);
         } else if (inputs.length > 0) {
           // Naive implementation, we'll just grab the first input and hope it's accurate
@@ -300,13 +301,13 @@ const bridgetownPreset = (outputFolder) => ({
 
 // Load the PostCSS config from postcss.config.js or whatever else is a supported location/format
 const postcssrc = require("postcss-load-config");
-const postCssConfig = postcssrc.sync();
 
-module.exports = (outputFolder, esbuildOptions) => {
+module.exports = async (outputFolder, esbuildOptions) => {
   esbuildOptions.plugins = esbuildOptions.plugins || [];
   // Add the PostCSS & glob plugins to the top of the plugin stack
+  const postCssConfig = await postcssrc();
   esbuildOptions.plugins.unshift(
-    postCssPlugin(postCssConfig, esbuildOptions.postCssPluginConfig || {})
+    importPostCssPlugin(postCssConfig, esbuildOptions.postCssPluginConfig || {})
   );
   if (esbuildOptions.postCssPluginConfig)
     delete esbuildOptions.postCssPluginConfig;
@@ -346,7 +347,7 @@ module.exports = (outputFolder, esbuildOptions) => {
       minify: process.argv.includes("--minify"),
       sourcemap: true,
       target: "es2016",
-      entryPoints: ["frontend/javascript/index.js"],
+      entryPoints: ["./frontend/javascript/index.js"],
       entryNames: "[dir]/[name].[hash]",
       outdir: path.join(process.cwd(), `${outputFolder}/_bridgetown/static`),
       publicPath: "/_bridgetown/static",
