@@ -27,7 +27,7 @@ gem "bridgetown", "~> 1.1.0"
 group :bridgetown_plugins do
   gem "bridgetown-feed", "~> 2.1"
   gem "bridgetown-seo-tag", "~> 5.0"
-  gem "bridgetown-sitemap", "~> 1.1"
+  gem "bridgetown-sitemap", "~> 1.2"
 end
 
 # Puma is a Rack-compatible server used by Bridgetown
