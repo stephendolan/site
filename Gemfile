@@ -25,7 +25,7 @@ gem "bridgetown", "~> 1.2.0"
 # gem "bridgetown-routes", "~> 1.0.0.beta1", group: :bridgetown_plugins
 
 group :bridgetown_plugins do
-  gem "bridgetown-feed", "~> 2.1"
+  gem "bridgetown-feed", "~> 3.0"
   gem "bridgetown-seo-tag", "~> 5.0"
   gem "bridgetown-sitemap", "~> 1.2"
 end
