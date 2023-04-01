@@ -26,7 +26,7 @@ gem "bridgetown", "~> 1.2.0"
 
 group :bridgetown_plugins do
   gem "bridgetown-feed", "~> 2.1"
-  gem "bridgetown-seo-tag", "~> 5.0"
+  gem "bridgetown-seo-tag", "~> 6.0"
   gem "bridgetown-sitemap", "~> 1.2"
 end
 
