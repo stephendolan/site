@@ -34,5 +34,5 @@ end
 # (you can optionally limit this to the "development" group)
 group :development do
   gem "standard", "~> 1.22"
-  gem "puma", "~> 6.1"
+  gem "puma", "~> 6.2"
 end
