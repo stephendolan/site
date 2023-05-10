@@ -26,7 +26,7 @@ title: Writing
   <div class="bg-gray-800 bg-opacity-80 flex shadow overflow-hidden rounded-md">
   <!-- https://unsplash.com/documentation#supported-parameters -->
   {% assign unsplash_api_parameters = "?fit=crop&auto=format&h=192&w=224" %}
-  <img class="hidden lg:block h-48 w-56" src="{{ featured_post.image }}{{ unsplash_api_parameters }}">
+  <img class="hidden lg:block h-48 w-56 object-cover" src="{{ featured_post.image }}{{ unsplash_api_parameters }}">
 
   <div class="px-4 py-4">
     <p class="text-sm text-gray-300">

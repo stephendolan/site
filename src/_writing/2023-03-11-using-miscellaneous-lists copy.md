@@ -1,10 +1,10 @@
 ---
 title: "Where does a 'Miscellaneous' list fit into OmniFocus and GTD?"
 description: "Single action lists are dangerous, but can be a force for good when used responsibly."
-category: productivity
+category: Productivity
 tags: OmniFocus
-image: https://images.unsplash.com/photo-1519786632971-829b4ac6ecce
-featured: true
+image: https://cdn.midjourney.com/b4f4849c-750c-43d2-bad0-91d19b00ffbd/0_2.png
+featured: false
 ---
 
 {% assign dateString = resource.data.date | date: "%Y-%m-%d" %}
