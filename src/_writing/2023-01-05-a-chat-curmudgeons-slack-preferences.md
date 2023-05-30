@@ -2,7 +2,7 @@
 title: "A Chat Curmudgeon's Guide to Slack Preferences"
 description: "I hate Slack's default preferences, and so can you!"
 category: Productivity
-image: https://images.unsplash.com/photo-1563986768609-322da13575f3
+image: https://cdn.midjourney.com/d5c204fd-d4f5-4d76-a041-6e1eff5418d3/0_3.png
 ---
 
 {% assign dateString = resource.data.date | date: "%Y-%m-%d" %}
