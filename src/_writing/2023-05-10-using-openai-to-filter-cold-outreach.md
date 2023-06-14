@@ -63,7 +63,7 @@ If you have a massive inbox full of unread emails, processing all of them throug
      return threads.length > 1;
    }
 
-   function isOngoingConversation(thread) {
+   function isAllowListedConversation(thread) {
      return thread.getMessages().some((message) => {
        return new RegExp(userProperties.getProperty("allowListRegex")).test(
          message.getFrom()
@@ -73,7 +73,7 @@ If you have a massive inbox full of unread emails, processing all of them throug
 
    function itsProbablyNotSpam(thread) {
      return (
-       isOngoingConversation(thread) || haveReceivedFromSenderBefore(thread)
+       isAllowListedConversation(thread) || haveReceivedFromSenderBefore(thread)
      );
    }
 
