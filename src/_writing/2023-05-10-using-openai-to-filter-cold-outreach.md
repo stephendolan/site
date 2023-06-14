@@ -65,7 +65,7 @@ If you have a massive inbox full of unread emails, processing all of them throug
 
    function isOngoingConversation(thread) {
      return thread.getMessages().some((message) => {
-       new RegExp(userProperties.getProperty("allowListRegex")).test(
+       return new RegExp(userProperties.getProperty("allowListRegex")).test(
          message.getFrom()
        );
      });
