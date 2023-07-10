@@ -45,7 +45,7 @@ If you have a massive inbox full of unread emails, processing all of them throug
    function setUserVariables() {
      // Ensure that your account has access to the model you're trying to use.
      userProperties.setProperty("openAiApiKey", "sk-your-key");
-     userProperties.setProperty("openAiModel", "gpt-3.5-turbo");
+     userProperties.setProperty("openAiModel", "gpt-4");
 
      // We can use a regular expression to check for participants that should always flag a conversation as valid
      // Put your own personal email here, or a wildcard matching your company's domain
