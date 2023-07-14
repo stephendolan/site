@@ -176,6 +176,7 @@ If you have a massive inbox full of unread emails, processing all of them throug
    }
    ```
 
+1. In Gmail, create two labels matching the values you selected for `processedLabel` and `outreachLabel`.
 1. Click "Run" in the top toolbar to make sure everything is working and accept Google's permission prompts. It's helpful to manually move an email that was cold outreach and one that definitely wasn't into your inbox and mark them both as unread.
 1. Click on "Triggers" on the left side of your screen, and add a new one that runs the `main` function however often you need your inbox scanned. I run mine every 5 minutes.
 
