@@ -45,7 +45,7 @@ If you have a massive inbox full of unread emails, processing all of them throug
    function setUserVariables() {
      // Ensure that your account has access to the model you're trying to use.
      userProperties.setProperty("openAiApiKey", "sk-your-key");
-     userProperties.setProperty("openAiModel", "gpt-4");
+     userProperties.setProperty("openAiModel", "gpt-3.5-turbo-16k");
 
      // We can use a regular expression to check for participants that should always flag a conversation as valid
      // Put your own personal email here, or a wildcard matching your company's domain like this:
@@ -93,6 +93,8 @@ If you have a massive inbox full of unread emails, processing all of them throug
    function looksLikeColdOutreach(thread) {
      const messageBody = thread.getMessages()[0].getBody();
      const apiKey = userProperties.getProperty("openAiApiKey");
+     // This saves a bit of cost by sending only the first 250 characters of the email body. You can adjust this up and down based on the token
+     // limit of the model you're using and how much you want to spend.
      const prompt = `Does this email content looks like cold outreach from a company I don't know? Answer with one word, "Yes" or "No"\n\n ${messageBody
        .trim()
        .substring(0, 250)}`;
