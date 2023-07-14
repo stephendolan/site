@@ -48,8 +48,8 @@ If you have a massive inbox full of unread emails, processing all of them throug
      userProperties.setProperty("openAiModel", "gpt-4");
 
      // We can use a regular expression to check for participants that should always flag a conversation as valid
-     // Put your own personal email here, or a wildcard matching your company's domain
-     userProperties.setProperty("allowListRegex", ".*@yourdomain.com");
+     // Put your own personal email here, or a wildcard matching your company's domain like this:
+     userProperties.setProperty("allowListRegex", ".*@yourdomain.com[^.]*");
 
      // If you're using a nested label, separate the sub-labels with a slash like 'AI/Processed'
      userProperties.setProperty("processedLabel", "AI/Processed");
