@@ -4,7 +4,6 @@ description: "I've seen an increase lately in the number of bad cold outreach I'
 category: Productivity
 tags: Email AI Automation
 image: https://cdn.midjourney.com/23046ddf-45d1-4441-8056-0918d637e8b9/0_1.png
-featured: true
 ---
 
 {% assign dateString = resource.data.date | date: "%Y-%m-%d" %}
