@@ -37,8 +37,8 @@ So, let's assume you've got a [Kinesis Advantage2](https://kinesis-ergo.com/shop
 Here are the necessary incantations to get it set up:
 
 1. Ensure you're on the latest firmware version (at least version `1.0.521`).
-   - You can check this by pressing `program + escape` in an open text editor. You'll get a status printout with your firmware version, which you can check against the "Firmware Updates" section of (their support page)[https://kinesis-ergo.com/support/advantage2/].
-   - If you need to update, you can follow the update instructions in the (official Kinesis PDF)[https://kinesis-ergo.com/wp-content/uploads/Adv2-Firmware-Update-Instructions-2-2-21.pdf].
+   - You can check this by pressing `program + escape` in an open text editor. You'll get a status printout with your firmware version, which you can check against the "Firmware Updates" section of [their support page](https://kinesis-ergo.com/support/advantage2/).
+   - If you need to update, you can follow the update instructions in the [official Kinesis PDF](https://kinesis-ergo.com/wp-content/uploads/Adv2-Firmware-Update-Instructions-2-2-21.pdf).
 1. Enter Power User Mode by pressing `program + shift + escape`. Your keyboard lights should blink four times; keep holding down program and shift until they're done blinking.
 1. Mount your keyboard as a device by pressing `program + F1`.
    - Actually getting the device to show up on my Mac seemed to be a bit fiddly. Don't get discouraged if you don't see it. Just make sure you're in Power User Mode (press `program + escape` in a text editor for a status printout) and try again.
