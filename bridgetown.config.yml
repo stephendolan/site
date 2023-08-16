@@ -14,10 +14,6 @@
 # https://learnxinyminutes.com/docs/yaml/
 #
 
-url: "https://stephendolan.com"
-
-base_path: "/"
-
 permalink: pretty
 
 timezone: America/New_York
