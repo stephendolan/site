@@ -45,25 +45,25 @@ Once a day, a Google Apps Script runs at ~2 am and combs through a list of event
    // Pull in Moment and Moment Holiday libraries.
    eval(
      UrlFetchApp.fetch(
-       "https://cdn.jsdelivr.net/npm/moment@latest"
-     ).getContentText()
+       "https://cdn.jsdelivr.net/npm/moment@latest",
+     ).getContentText(),
    );
    eval(
      UrlFetchApp.fetch(
-       "https://cdn.jsdelivr.net/npm/moment-holiday@latest"
-     ).getContentText()
+       "https://cdn.jsdelivr.net/npm/moment-holiday@latest",
+     ).getContentText(),
    );
 
    const userProperties = PropertiesService.getUserProperties();
    userProperties.setProperty("advance_days", 30);
    userProperties.setProperty(
      "email_destination",
-     "your-omni-address@sync.omnigroup.com"
+     "your-omni-address@sync.omnigroup.com",
    );
 
    const dateToCheck = moment().add(
      userProperties.getProperty("advance_days"),
-     "days"
+     "days",
    );
 
    const customHolidays = {
@@ -113,7 +113,7 @@ Once a day, a Google Apps Script runs at ~2 am and combs through a list of event
          .format("Y");
        body = `This event marks ${parseInt(
          yearsFromInitialEvent,
-         10
+         10,
        )} years!\n`;
      }
 

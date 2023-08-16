@@ -31,8 +31,8 @@ Once a day, a Google Apps Script runs at ~2 am and combs through my contacts. If
    // Pull in DayJS for date calculations. Exposes `dayjs()` function.
    eval(
      UrlFetchApp.fetch(
-       "https://cdn.jsdelivr.net/npm/dayjs@latest"
-     ).getContentText()
+       "https://cdn.jsdelivr.net/npm/dayjs@latest",
+     ).getContentText(),
    );
 
    function main() {
@@ -41,13 +41,13 @@ Once a day, a Google Apps Script runs at ~2 am and combs through my contacts. If
      userProperties.setProperty("advance_days", 14);
      userProperties.setProperty(
        "email_destination",
-       "your-omni-address@sync.omnigroup.com"
+       "your-omni-address@sync.omnigroup.com",
      );
 
      let contacts = ContactsApp.getContacts();
      const dateToCheck = dayjs().add(
        userProperties.getProperty("advance_days"),
-       "days"
+       "days",
      );
 
      contacts.forEach((contact) => {
@@ -69,7 +69,7 @@ Once a day, a Google Apps Script runs at ~2 am and combs through my contacts. If
 
        let recipient = userProperties.getProperty("email_destination");
        let subject = `Wish ${contact.getFullName()} a happy birthday on ${birthDate.format(
-         "MMMM D"
+         "MMMM D",
        )}.`;
 
        let body = "";

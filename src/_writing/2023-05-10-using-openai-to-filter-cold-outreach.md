@@ -57,7 +57,7 @@ If you have a massive inbox full of unread emails, processing all of them throug
 
    function haveReceivedFromSenderBefore(thread) {
      const threads = GmailApp.search(
-       `from:${thread.getMessages()[0].getFrom()}`
+       `from:${thread.getMessages()[0].getFrom()}`,
      );
      return threads.length > 1;
    }
@@ -65,7 +65,7 @@ If you have a massive inbox full of unread emails, processing all of them throug
    function isAllowListedConversation(thread) {
      return thread.getMessages().some((message) => {
        return new RegExp(userProperties.getProperty("allowListRegex")).test(
-         message.getFrom()
+         message.getFrom(),
        );
      });
    }
@@ -78,10 +78,10 @@ If you have a massive inbox full of unread emails, processing all of them throug
 
    function alreadyProcessed(thread) {
      const processedLabel = GmailApp.getUserLabelByName(
-       userProperties.getProperty("processedLabel")
+       userProperties.getProperty("processedLabel"),
      );
      const outreachLabel = GmailApp.getUserLabelByName(
-       userProperties.getProperty("outreachLabel")
+       userProperties.getProperty("outreachLabel"),
      );
 
      const labels = thread.getLabels();
@@ -129,21 +129,21 @@ If you have a massive inbox full of unread emails, processing all of them throug
 
    function addInvestigationLabel(thread) {
      const label = GmailApp.getUserLabelByName(
-       userProperties.getProperty("processedLabel")
+       userProperties.getProperty("processedLabel"),
      );
      thread.addLabel(label);
    }
 
    function removeInvestigationLabel(thread) {
      const label = GmailApp.getUserLabelByName(
-       userProperties.getProperty("processedLabel")
+       userProperties.getProperty("processedLabel"),
      );
      thread.removeLabel(label);
    }
 
    function addColdOutreachLabel(thread) {
      const label = GmailApp.getUserLabelByName(
-       userProperties.getProperty("outreachLabel")
+       userProperties.getProperty("outreachLabel"),
      );
      thread.addLabel(label);
    }
