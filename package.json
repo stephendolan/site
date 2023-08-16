@@ -21,6 +21,12 @@
     "prettier-plugin-tailwindcss": "^0.5",
     "tailwindcss": "^3"
   },
+  "prettier": {
+    "plugins": [
+      "@shopify/prettier-plugin-liquid",
+      "prettier-plugin-tailwindcss"
+    ]
+  },
   "dependencies": {
     "alpinejs": "^3.11.1"
   }
