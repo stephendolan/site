@@ -22,12 +22,10 @@ jobs:
           node-version: 18
 
       - name: Install Prettier Plugins
-        run: npm install @shopify/prettier-plugin-liquid prettier-plugin-tailwindcss
+        run: npm install
 
       - name: Run Prettier Checks
-        uses: actionsx/prettier@v3
-        with:
-          args: --check **/*.{js,md,liquid} --plugin=@shopify/prettier-plugin-liquid
+        run: npm run --check **/*.{js,md,liquid} --plugin=@shopify/prettier-plugin-liquid
 
       - name: Run StandardRB Check
         env:
