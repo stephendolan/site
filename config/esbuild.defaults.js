@@ -30,7 +30,7 @@ const moduleAvailable = (name) => {
   try {
     require.resolve(name);
     return true;
-  } catch (e) { }
+  } catch (e) {}
   return false;
 };
 
