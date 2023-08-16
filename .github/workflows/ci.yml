@@ -14,12 +14,15 @@ jobs:
       checks: write
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - name: checkout
+        uses: actions/checkout@v3
+
       - name: prettier
         uses: creyD/prettier_action@v4.3
         with:
-          prettier_options: --check **/*.{js,md,liquid}
+          prettier_options: --check **/*.{js,md,liquid} --plugin=@shopify/prettier-plugin-liquid --plugin=prettier-plugin-tailwindcss
           prettier_plugins: "@shopify/prettier-plugin-liquid prettier-plugin-tailwindcss"
+
       - name: standardrb
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
