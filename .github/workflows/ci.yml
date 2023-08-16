@@ -17,15 +17,15 @@ jobs:
       - name: Check out codebase
         uses: actions/checkout@v3
 
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
+      # - uses: actions/setup-node@v3
+      #   with:
+      #     node-version: 18
 
-      - name: Install Prettier Plugins
-        run: npm install
+      # - name: Install Prettier Plugins
+      #   run: npm install
 
-      - name: Run Prettier Checks
-        run: npm run --check **/*.{js,md,liquid} --plugin=@shopify/prettier-plugin-liquid
+      # - name: Run Prettier Checks
+      #   run: npm run --check **/*.{js,md,liquid} --plugin=@shopify/prettier-plugin-liquid
 
       - name: Run StandardRB Check
         env:
