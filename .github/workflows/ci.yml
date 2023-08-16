@@ -22,7 +22,7 @@ jobs:
           node-version: 18
 
       - name: Install Prettier Plugins
-        run: npm install -g @shopify/prettier-plugin-liquid prettier-plugin-tailwindcss
+        run: npm install @shopify/prettier-plugin-liquid prettier-plugin-tailwindcss
 
       - name: Run Prettier Checks
         uses: actionsx/prettier@v3
