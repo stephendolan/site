@@ -14,15 +14,16 @@ jobs:
       checks: write
       contents: read
     steps:
-      - name: checkout
+      - name: Check out codebase
         uses: actions/checkout@v3
 
-      - name: prettier
-        run: 
-          - npm install -g prettier prettier-plugin-tailwindcss @shopify/prettier-plugin-liquid
-          - npx prettier --check **/*.{js,md,liquid} --plugin=prettier-plugin-tailwindcss --plugin=@shopify/prettier-plugin-liquid
+      - name: Install Prettier Plugins
+        run: npm install -g prettier prettier-plugin-tailwindcss @shopify/prettier-plugin-liquid
 
-      - name: standardrb
+      - name: Run Prettier Check
+        run: npx prettier --check **/*.{js,md,liquid} --plugin=prettier-plugin-tailwindcss --plugin=@shopify/prettier-plugin-liquid
+
+      - name: Run StandardRB Check
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         uses: amoeba/standardrb-action@v4
