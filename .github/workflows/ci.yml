@@ -19,10 +19,12 @@ jobs:
         uses: creyD/prettier_action@v4.3
         with:
           prettier_options: --check **/*.{js,md,liquid}
-          prettier_plugins:
-            - "@shopify/prettier-plugin-liquid"
-            - "prettier-plugin-tailwindcss"
-      - name: standardrb
+          - name: prettier
+            uses: creyD/prettier_action@v4.3
+            with:
+              prettier_options: --check **/*.{js,md,liquid}
+              prettier_plugins: "@shopify/prettier-plugin-liquid prettier-plugin-tailwindcss"
+          - name: standardrb
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         uses: amoeba/standardrb-action@v4
