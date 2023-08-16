@@ -17,6 +17,13 @@ jobs:
       - name: Check out codebase
         uses: actions/checkout@v3
 
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install Prettier Plugins
+        run: npm install -g @shopify/prettier-plugin-liquid prettier-plugin-tailwindcss
+
       - name: Run Prettier Checks
         uses: actionsx/prettier@v3
         with:
