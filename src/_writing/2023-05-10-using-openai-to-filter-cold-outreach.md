@@ -6,6 +6,8 @@ tags: Email AI Automation
 image: https://cdn.midjourney.com/23046ddf-45d1-4441-8056-0918d637e8b9/0_1.png
 ---
 
+<!-- Include assets like ![Asset]({{ assetPath }}/my-asset.png) -->
+
 {% assign dateString = resource.data.date | date: "%Y-%m-%d" %}
 {% assign assetPath = "/images/writing/" | append: dateString %}
 

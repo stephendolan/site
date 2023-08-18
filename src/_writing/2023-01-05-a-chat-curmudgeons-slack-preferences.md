@@ -5,6 +5,8 @@ category: Productivity
 image: https://cdn.midjourney.com/d5c204fd-d4f5-4d76-a041-6e1eff5418d3/0_3.png
 ---
 
+<!-- Include assets like ![Asset]({{ assetPath }}/my-asset.png) -->
+
 {% assign dateString = resource.data.date | date: "%Y-%m-%d" %}
 {% assign assetPath = "/images/writing/" | append: dateString %}
 

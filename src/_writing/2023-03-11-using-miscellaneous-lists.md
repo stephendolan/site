@@ -4,8 +4,9 @@ description: "Single action lists are dangerous, but can be a force for good whe
 category: Productivity
 tags: OmniFocus
 image: https://cdn.midjourney.com/b4f4849c-750c-43d2-bad0-91d19b00ffbd/0_2.png
-featured: false
 ---
+
+<!-- Include assets like ![Asset]({{ assetPath }}/my-asset.png) -->
 
 {% assign dateString = resource.data.date | date: "%Y-%m-%d" %}
 {% assign assetPath = "/images/writing/" | append: dateString %}
