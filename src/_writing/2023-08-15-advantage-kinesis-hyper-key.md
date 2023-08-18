@@ -2,7 +2,8 @@
 title: "Adding Hyper key support to the Kinesis Advantage2 keyboard"
 description: "There are apps that add Hyper key functionality to macOS, but this method will work on any OS without additional software!"
 category: Productivity
-tags: Shortcuts
+tags:
+  - Shortcuts
 image: https://cdn.midjourney.com/10e3933d-3710-44aa-b390-3eabf3b0ec1d/0_3.png
 ---
 

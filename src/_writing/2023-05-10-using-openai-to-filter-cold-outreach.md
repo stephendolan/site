@@ -2,7 +2,10 @@
 title: "Using OpenAI to filter cold outreach emails"
 description: "I've seen an increase lately in the number of bad cold outreach I've received. Let's use AI to detect and filter them out!"
 category: Productivity
-tags: Email AI Automation
+tags:
+  - Email
+  - AI
+  - Automation
 image: https://cdn.midjourney.com/23046ddf-45d1-4441-8056-0918d637e8b9/0_1.png
 ---
 

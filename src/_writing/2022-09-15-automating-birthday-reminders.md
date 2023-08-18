@@ -2,7 +2,9 @@
 title: "Automatic birthday reminders in OmniFocus"
 description: "Using Google Apps Script and Google Contacts, you can automatically send yourself reminders to wish people a happy birthday."
 category: Productivity
-tags: OmniFocus Automation
+tags:
+  - OmniFocus
+  - Automation
 image: https://images.unsplash.com/photo-1530103862676-de8c9debad1d
 ---
 

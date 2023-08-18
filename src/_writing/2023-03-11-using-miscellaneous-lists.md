@@ -2,7 +2,8 @@
 title: "Where does a 'Miscellaneous' list fit into OmniFocus and GTD?"
 description: "Single action lists are dangerous, but can be a force for good when used responsibly."
 category: Productivity
-tags: OmniFocus
+tags:
+  - OmniFocus
 image: https://cdn.midjourney.com/b4f4849c-750c-43d2-bad0-91d19b00ffbd/0_2.png
 ---
 

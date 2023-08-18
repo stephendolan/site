@@ -2,7 +2,9 @@
 title: "Automatic event reminders in OmniFocus"
 description: "Using Google Apps Script and Google Contacts, you can automatically send yourself reminders for key events in your life."
 category: Productivity
-tags: OmniFocus Automation
+tags:
+  - OmniFocus
+  - Automation
 image: https://images.unsplash.com/photo-1435527173128-983b87201f4d
 ---
 
