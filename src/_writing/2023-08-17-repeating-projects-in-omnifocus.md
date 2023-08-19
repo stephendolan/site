@@ -14,7 +14,7 @@ featured: true
 {% assign dateString = resource.data.date | date: "%Y-%m-%d" %}
 {% assign assetPath = "/images/writing/" | append: dateString %}
 
-## Managing Recurring Tasks in OmniFocus
+## Managing recurring projects in OmniFocus
 
 Recurring tasks are pretty straightforward in OmniFocus. But what's the best way to set up a project (something that takes multiple steps to complete) that repeats? Things like:
 
