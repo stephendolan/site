@@ -1,6 +1,6 @@
 ---
 series: "Mastering OmniFocus"
-title: "Two Powerful Methods for Setting Up Recurring Tasks"
+title: "Two Powerful Methods for Setting Up Recurring Projects"
 description: "Single action lists are dangerous, but can be a force for good when used responsibly."
 category: Productivity
 tags:
