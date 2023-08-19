@@ -6,7 +6,7 @@ RUN apk add --no-cache build-base
 RUN gem install bundler -N
 RUN gem install bridgetown -N
 COPY . .
-RUN yarn install
+RUN npm install
 RUN bundle install
 RUN ./bin/bridgetown deploy
 
