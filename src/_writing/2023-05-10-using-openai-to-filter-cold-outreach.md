@@ -24,7 +24,7 @@ I'm already seeing the results of this in my inbox in the form of cold outreach 
 
 ## Enter: Google Apps Script
 
-Google has this excellent scripting functionality that sits on top of lots of their services called [Google Apps Script](https://developers.google.com/apps-script). Most use cases (including this one) won't cost you anything, even on your free personal account.
+Google has a scripting tool that sits on top of lots of their services called [Google Apps Script](https://developers.google.com/apps-script).
 
 Here's an overview of how I use it:
 
@@ -188,4 +188,4 @@ If you have a massive inbox full of unread emails, processing all of them throug
 
 ## Enjoy!
 
-I'd expect that I'll take this post down in the next few months as tools like Gmail and Superhuman implement some of this basic detection directly in their apps. In the meantime, though, I've ended up with a much more pleasant inbox that leaves me feeling frustrated less often.
+If you find a large number of false positives that you can easily categorize, try modifying the prompt above! You might include things like "If someone mentions that they're looking for an investment, please don't designate it as cold outreach" or "If the email contains a calendar invite, never designate it as cold outreach".
