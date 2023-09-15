@@ -10,7 +10,7 @@
     "@shopify/prettier-plugin-liquid": "^1.2",
     "@tailwindcss/forms": "^0.5.3",
     "@tailwindcss/typography": "^0.5.9",
-    "esbuild": "^0.17.19",
+    "esbuild": "^0.19.3",
     "glob": "^8.0.3",
     "postcss": "^8.4.21",
     "postcss-flexbugs-fixes": "^5.0.2",
