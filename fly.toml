@@ -1,5 +1,3 @@
-# fly.toml file generated for stephen-dolan on 2022-09-16T10:20:52-04:00
-
 app = "stephen-dolan"
 kill_signal = "SIGINT"
 kill_timeout = 5
@@ -8,32 +6,23 @@ processes = []
 [env]
   BRIDGETOWN_ENV = "production"
 
+[http_service]
+  internal_port = 8043
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+
+  [http_service.http_options.response.headers]
+    Cache-Control = "max-age=432000"
+
+  [[http_service.checks]]
+    grace_period = "10s"
+    interval = "30s"
+    method = "GET"
+    timeout = "5s"
+    path = "/"
+
 [experimental]
   allowed_public_ports = []
   auto_rollback = true
-
-[[services]]
-  http_checks = []
-  internal_port = 8043
-  processes = ["app"]
-  protocol = "tcp"
-  script_checks = []
-  [services.concurrency]
-    hard_limit = 25
-    soft_limit = 20
-    type = "connections"
-
-  [[services.ports]]
-    force_https = true
-    handlers = ["http"]
-    port = 80
-
-  [[services.ports]]
-    handlers = ["tls", "http"]
-    port = 443
-
-  [[services.tcp_checks]]
-    grace_period = "1s"
-    interval = "15s"
-    restart_limit = 0
-    timeout = "2s"
