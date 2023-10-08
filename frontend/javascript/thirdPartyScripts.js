@@ -31,3 +31,16 @@ export const loadTwitter = () => {
     document.head.appendChild(script);
   });
 };
+
+export const loadConvertKit = () => {
+  return new Promise((resolve) => {
+    const script = document.createElement("script");
+    script.src = "https://f.convertkit.com/ckjs/ck.5.js";
+    script.async = true;
+    script.defer = true;
+    script.onload = () => {
+      resolve();
+    };
+    document.head.appendChild(script);
+  });
+};

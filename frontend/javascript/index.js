@@ -3,6 +3,7 @@ import Alpine from "alpinejs";
 
 import { loadSavvyCal, initSavvyCal } from "$javascript/thirdPartyScripts";
 import twitterEmbed from "$javascript/alpine/twitterEmbed";
+import convertKitEmbed from "$javascript/alpine/convertKitEmbed";
 
 loadSavvyCal().then(() => {
   initSavvyCal();
@@ -13,6 +14,7 @@ loadSavvyCal().then(() => {
   });
 });
 
+Alpine.data('convertKitEmbed', convertKitEmbed);
 Alpine.data('twitterEmbed', twitterEmbed);
 Alpine.start();
 

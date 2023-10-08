@@ -61,7 +61,9 @@
     <span class="block">Get notified when I write</span>
   </h2>
 
-  {% render "embeds/convert_kit" %}
+  <div x-data="convertKitEmbed">
+    {% render "embeds/convert_kit" %}
+  </div>
 </section>
 
 <section class="max-w-6xl mx-auto mt-6 bg-gray-800 bg-opacity-70 rounded-md shadow">
