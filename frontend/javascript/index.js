@@ -1,9 +1,11 @@
 import "$styles/index.css";
 import Alpine from "alpinejs";
 
-import { loadSavvyCal, initSavvyCal } from "$javascript/thirdPartyScripts";
+import { loadSavvyCal, initSavvyCal, loadFathomAnalytics } from "$javascript/thirdPartyScripts";
 import twitterEmbed from "$javascript/alpine/twitterEmbed";
 import convertKitEmbed from "$javascript/alpine/convertKitEmbed";
+
+loadFathomAnalytics();
 
 loadSavvyCal().then(() => {
   initSavvyCal();

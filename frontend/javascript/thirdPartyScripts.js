@@ -44,3 +44,16 @@ export const loadConvertKit = () => {
     document.head.appendChild(script);
   });
 };
+
+export const loadFathomAnalytics = () => {
+  return new Promise((resolve) => {
+    const script = document.createElement("script");
+    script.src = "https://cdn.usefathom.com/script.js";
+    script.defer = true;
+    script.dataset.site = "VFRRSROW";
+    script.onload = () => {
+      resolve();
+    };
+    document.head.appendChild(script);
+  });
+};
