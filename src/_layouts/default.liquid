@@ -10,8 +10,7 @@
         x-show="mobileMenuOpen"
         class="fixed inset-0 z-40 flex md:hidden"
         role="dialog"
-        aria-modal="true"
-      >
+        aria-modal="true">
         {% render 'sidebar/mobile', current_url: resource.relative_url, collections: collections %}
       </div>
 
@@ -35,8 +34,5 @@
         </main>
       </div>
     </div>
-
-    {% render 'scripts/twitter_widget' %}
-    {% render 'scripts/savvy_cal_embed' %}
   </body>
 </html>
