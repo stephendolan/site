@@ -26,7 +26,7 @@ defaults:
       featured: false
   - values:
       layout: "default"
-      image: "/images/stephen.jpg"
+      image: "/images/stephen.webp"
       author:
         name: Stephen Dolan
         twitter: Stephen_Dolan
