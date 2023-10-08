@@ -14,7 +14,7 @@ processes = []
   min_machines_running = 0
 
   [http_service.http_options.response.headers]
-    Cache-Control = "max-age=432000"
+    Cache-Control = "public, max-age=432000"
 
   [[http_service.checks]]
     grace_period = "10s"
