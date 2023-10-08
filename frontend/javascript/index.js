@@ -1,7 +1,8 @@
 import "$styles/index.css";
 import Alpine from "alpinejs";
 
-import { loadSavvyCal, initSavvyCal, loadTwitter } from "./thirdPartyScripts";
+import { loadSavvyCal, initSavvyCal } from "$javascript/thirdPartyScripts";
+import twitterEmbed from "$javascript/alpine/twitterEmbed";
 
 loadSavvyCal().then(() => {
   initSavvyCal();
@@ -12,8 +13,7 @@ loadSavvyCal().then(() => {
   });
 });
 
-loadTwitter();
-
+Alpine.data('twitterEmbed', twitterEmbed);
 Alpine.start();
 
 // Import all JavaScript & CSS files from src/_components
