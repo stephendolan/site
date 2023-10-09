@@ -1,7 +1,7 @@
 ---
 series: "Mastering OmniFocus"
 title: "Two Powerful Methods for Setting Up Recurring Projects"
-description: "Single action lists are dangerous, but can be a force for good when used responsibly."
+description: "Discover two efficient methods for managing recurring projects in OmniFocus and choose the approach that suits your preferences."
 category: Productivity
 tags:
   - OmniFocus
