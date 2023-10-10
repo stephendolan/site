@@ -45,15 +45,44 @@ export const loadConvertKit = () => {
   });
 };
 
-export const loadFathomAnalytics = () => {
+export const loadHeapAnalytics = (appId) => {
   return new Promise((resolve) => {
-    const script = document.createElement("script");
-    script.src = "https://cdn.usefathom.com/script.js";
-    script.defer = true;
-    script.dataset.site = "VFRRSROW";
-    script.onload = () => {
-      resolve();
+    window.heap = window.heap || [];
+    heap.load = function (e, t) {
+      window.heap.appid = e;
+      window.heap.config = t = t || {};
+      var r = document.createElement("script");
+      r.type = "text/javascript";
+      r.async = true;
+      r.src = "https://cdn.heapanalytics.com/js/heap-" + e + ".js";
+      var a = document.getElementsByTagName("script")[0];
+      a.parentNode.insertBefore(r, a);
+      for (
+        var n = function (e) {
+          return function () {
+            heap.push([e].concat(Array.prototype.slice.call(arguments, 0)));
+          };
+        },
+        p = [
+          "addEventProperties",
+          "addUserProperties",
+          "clearEventProperties",
+          "identify",
+          "resetIdentity",
+          "removeEventProperty",
+          "setEventProperties",
+          "track",
+          "unsetEventProperty",
+        ],
+        o = 0;
+        o < p.length;
+        o++
+      )
+        heap[p[o]] = n(p[o]);
+      r.onload = () => {
+        resolve();
+      };
     };
-    document.head.appendChild(script);
+    heap.load(appId);
   });
 };
