@@ -4,7 +4,7 @@ description: "There are apps that add Hyper key functionality to macOS, but this
 category: Productivity
 tags:
   - Shortcuts
-image: https://cdn.midjourney.com/10e3933d-3710-44aa-b390-3eabf3b0ec1d/0_3.png
+image: /images/writing/2023-08-15/index.webp
 ---
 
 <!-- Include assets like ![Asset]({{ assetPath }}/my-asset.png) -->

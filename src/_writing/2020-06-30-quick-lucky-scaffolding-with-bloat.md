@@ -4,7 +4,6 @@ description: "Adding libraries to Lucky projects can be time-consuming and prone
 category: Development
 tags:
   - Lucky Framework
-image: https://images.unsplash.com/photo-1497531551184-06b252e1bee1
 ---
 
 ## Introduction

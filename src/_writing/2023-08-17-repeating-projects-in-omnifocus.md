@@ -5,7 +5,7 @@ description: "Discover two efficient methods for managing recurring projects in 
 category: Productivity
 tags:
   - OmniFocus
-image: https://cdn.midjourney.com/5f05eeb2-b0da-4ba4-b98e-4893954215f5/0_3.png
+image: /images/writing/2023-08-17/index.webp
 featured: true
 ---
 
@@ -36,25 +36,25 @@ Instead of thinking of the repeating item as the project "Host our monthly meetu
 
 To make the task recurring, use the "Repeat" option in the inspector and set it up accordingly. If I want this task to show up each month, I'd select these options:
 
-![Repeating Task Options]({{ assetPath }}/repeating-task-options.png)
+![Repeating Task Options]({{ assetPath }}/repeating-task-options.webp)
 
 ### Add TaskPaper to the task notes
 
 Finally, to reduce the friction between seeing this task and making the actual project, I add the project in its [TaskPaper](https://guide.taskpaper.com/getting-started) format in the note. This way, creating the project is as easy as copying the TaskPaper text (`cmd+c`), pasting to my inbox (`cmd+v`), and converting to a project (`cmd+shift+!`). [TaskPaper in OmniFocus](https://support.omnigroup.com/omnifocus-taskpaper-reference/) can support due dates, tags, flagged status, etc. Generating the taskpaper text is as easy as right-clicking a project and selecting "Copy as TaskPaper". Here's what the final task looks like:
 
-![Repeating Task Full Details]({{ assetPath }}/repeating-task-full-details.png)
+![Repeating Task Full Details]({{ assetPath }}/repeating-task-full-details.webp)
 
 ### Put the task in a project
 
 Where you store these tasks is subjective, but I have a `Recurring` Single-Action project in all of my top-level folders that I use. I find that it's quite helpful to have one place to go to see all of the recurring projects and tasks I've committed to tackling:
 
-![Recurring Project Container]({{ assetPath }}/recurring-project-container.png)
+![Recurring Project Container]({{ assetPath }}/recurring-project-container.webp)
 
 ### The full picture
 
 When I've completed this action, my system would look like this with a new project and a deferred instance of the next recurring tickler task:
 
-![Repeating Task After Completion]({{ assetPath }}/repeating-task-after-completion.png)
+![Repeating Task After Completion]({{ assetPath }}/repeating-task-after-completion.webp)
 
 Something about this approach has been feeling really great to me lately, especially for projects that might require some slight tweaks each time I spin them up. Creating the project itself as the first action is a great way to force yourself into a quick review, rather than just seeing the first task in a potentially-stale project that's quite tempting to skip or be lazy about in your weekly review.
 
@@ -66,7 +66,7 @@ The second method for handling recurring projects is the more "out of the box" m
 
 Set up your project as you normally would, then check the "Complete with last action" checkbox and set up the "Repeat" option in the inspector. Here's what the same project from my previous example, which repeats monthly, would look like:
 
-![Repeating Project Options]({{ assetPath }}/repeating-project-options.png)
+![Repeating Project Options]({{ assetPath }}/repeating-project-options.webp)
 
 {% rendercontent "posts/callouts/tip" %}
 "Complete with last action" is totally optional, but can be great for projects that recur more frequently than your weekly review. As soon as you complete the last action in your project, it's status will change to Complete and the next recurring event will be created for you.

@@ -30,7 +30,7 @@ const moduleAvailable = (name) => {
   try {
     require.resolve(name);
     return true;
-  } catch (e) {}
+  } catch (e) { }
   return false;
 };
 
@@ -404,6 +404,7 @@ module.exports = async (esbuildOptions, ...args) => {
         ".woff2": "file",
         ".ttf": "file",
         ".eot": "file",
+        ".webp": "file",
       },
       resolveExtensions: [
         ".tsx",

@@ -5,7 +5,7 @@ category: Productivity
 tags:
   - OmniFocus
   - Tooling
-image: https://images.unsplash.com/photo-1566443280617-35db331c54fb
+image: /images/writing/2022-03-31/index.webp
 ---
 
 {% assign dateString = resource.data.date | date: "%Y-%m-%d" %}
@@ -39,7 +39,7 @@ Instead, you can use a few of the core elements of the [Getting Things Done](htt
 
 In this example, let's ensure that we don't forget to follow up with the customer about some redlines we sent over to an agreement. We'll give them two weeks before we ping them.
 
-![First Example]({{ assetPath }}/omnifocus-1.png)
+![First Example]({{ assetPath }}/omnifocus-1.webp)
 
 1. The project name is based on the outcome you want to achieve, making it easier to reference at a glance when you've got these tasks together in a single list.
 
@@ -53,13 +53,13 @@ In this example, let's ensure that we don't forget to follow up with the custome
 
 It's the same story for expansion; let's make sure we don't drop the ball and forget to follow up about how their ad campaign is doing so we can upsell:
 
-![Second Example]({{ assetPath }}/omnifocus-2.png)
+![Second Example]({{ assetPath }}/omnifocus-2.webp)
 
 ### Success
 
 This one is a bit different. This client has been with us for a while, and we want to check in next week and see how things are going. There's nothing to remind them about; just a friendly check-in that will build the relationship.
 
-![Third Example]({{ assetPath }}/omnifocus-3.png)
+![Third Example]({{ assetPath }}/omnifocus-3.webp)
 
 1. I use an "Email" tag to filter my tasks down to only the things I can work on in a given context. This element is entirely optional.
 
@@ -71,11 +71,11 @@ This setup might seem lovely, but how do you use it? In my OmniFocus, I have a c
 
 Nothing in the examples above meets those criteria, so my "Next" perspective is empty!
 
-![Empty Next Action Perspective]({{ assetPath }}/omnifocus-4.png)
+![Empty Next Action Perspective]({{ assetPath }}/omnifocus-4.webp)
 
 Let's change some things around, though, and pretend that we deferred our Success task to today's date, and our Expansion follow-up is due today as well. Now, when I open up my "Next" perspective, those two tasks are waiting for me:
 
-![Populated Next Action Perspective]({{ assetPath }}/omnifocus-5.png)
+![Populated Next Action Perspective]({{ assetPath }}/omnifocus-5.webp)
 
 ## Job done!
 

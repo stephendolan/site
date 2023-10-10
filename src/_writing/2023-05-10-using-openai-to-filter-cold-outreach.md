@@ -6,7 +6,7 @@ tags:
   - Email
   - AI
   - Automation
-image: https://cdn.midjourney.com/23046ddf-45d1-4441-8056-0918d637e8b9/0_1.png
+image: /images/writing/2023-05-10/index.webp
 ---
 
 <!-- Include assets like ![Asset]({{ assetPath }}/my-asset.png) -->

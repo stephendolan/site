@@ -5,7 +5,7 @@ category: Productivity
 tags:
   - OmniFocus
   - Automation
-image: https://images.unsplash.com/photo-1435527173128-983b87201f4d
+image: /images/writing/2022-10-10.webp
 ---
 
 ## Becoming a well-wishing, event tackling machine

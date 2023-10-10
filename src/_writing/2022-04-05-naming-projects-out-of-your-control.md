@@ -4,7 +4,7 @@ description: "Naming projects where you don't directly control the outcome can b
 category: Productivity
 tags:
   - GTD Principles
-image: https://images.unsplash.com/photo-1577511425081-0ec68e1bd454
+image: /images/writing/2022-04-05/index.webp
 ---
 
 Today, I was listening to this episode of the GTD podcast:

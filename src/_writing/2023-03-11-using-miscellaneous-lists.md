@@ -4,7 +4,7 @@ description: "Single action lists are dangerous, but can be a force for good whe
 category: Productivity
 tags:
   - OmniFocus
-image: https://cdn.midjourney.com/b4f4849c-750c-43d2-bad0-91d19b00ffbd/0_2.png
+image: /images/writing/2023-03-11/index.webp
 ---
 
 <!-- Include assets like ![Asset]({{ assetPath }}/my-asset.png) -->
@@ -30,7 +30,7 @@ If I hadn't already ordered the ink cartridge, "Change my printer ink cartridge"
 
 I like to put these kinds of actions into an Active, Single Action list called `Miscellaneous`. This is what that list looks like for me in my system today - notice that it doesn't have hundreds of projects disguised as single actions, and hasn't turned into the junk drawer that these so easily become:
 
-![My OmniFocus Miscellaneous Project]({{ assetPath }}/omnifocus-misc-project.png)
+![My OmniFocus Miscellaneous Project]({{ assetPath }}/omnifocus-misc-project.webp)
 
 Let's walk through these one at a time to explain my reasoning for keeping them here:
 
