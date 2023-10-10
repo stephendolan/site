@@ -3,7 +3,6 @@ import Alpine from "alpinejs";
 
 import { loadSavvyCal, initSavvyCal, loadHeapAnalytics } from "$javascript/thirdPartyScripts";
 import twitterEmbed from "$javascript/alpine/twitterEmbed";
-import convertKitEmbed from "$javascript/alpine/convertKitEmbed";
 
 if (process.env.NODE_ENV !== "production") {
   loadHeapAnalytics("1874465280");
@@ -20,7 +19,6 @@ loadSavvyCal().then(() => {
   });
 });
 
-Alpine.data('convertKitEmbed', convertKitEmbed);
 Alpine.data('twitterEmbed', twitterEmbed);
 Alpine.start();
 
