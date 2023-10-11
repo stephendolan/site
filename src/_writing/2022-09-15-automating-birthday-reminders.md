@@ -5,7 +5,7 @@ category: Productivity
 tags:
   - OmniFocus
   - Automation
-image: /images/writing/2022-09-15.webp
+image: /images/writing/2022-09-15/index.webp
 ---
 
 ## "Happy belated birthday!"

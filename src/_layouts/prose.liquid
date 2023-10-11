@@ -5,8 +5,8 @@ layout: default
 {% assign code_selection = 'prose-pre:select-all prose-code:select-all' %}
 {% assign link_hover_behavior = 'hover:prose-a:text-teal-300' %}
 
-<div class="max-w-6xl overflow-hidden rounded-md bg-gray-800 p-4 opacity-70 shadow sm:p-6 lg:p-8">
-  <article class="prose prose-invert prose-pre:lg:-mr-96 {{ code_backtick_removal }} {{ code_selection }} {{ link_hover_behavior }}">
+<div class="overflow-hidden rounded-md bg-gray-800 p-4 opacity-70 shadow sm:p-6 lg:p-8">
+  <article class="prose prose-invert mt-10 prose-pre:lg:-mr-96 {{ code_backtick_removal }} {{ code_selection }} {{ link_hover_behavior }}">
     <div class="text-center text-gray-100">
       <h1 class="mb-2 text-3xl font-bold">{{ page.title }}</h1>
       <p class="text-sm">
@@ -22,6 +22,8 @@ layout: default
       </p>
     </div>
 
-    {{ content }}
+    <section>
+      {{ content }}
+    </section>
   </article>
 </div>

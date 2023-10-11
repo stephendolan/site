@@ -29,6 +29,7 @@ defaults:
       image: "/images/stephen.webp"
       author:
         name: Stephen Dolan
+        picture: "/images/stephen.webp"
         twitter: Stephen_Dolan
 
 collections:
