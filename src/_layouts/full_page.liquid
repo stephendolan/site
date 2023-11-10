@@ -1,0 +1,35 @@
+<!doctype html>
+<html class="textured h-full" lang="{{ site.locale }}">
+  <head>
+    {% render 'head', metadata: site.metadata, title: page.title %}
+  </head>
+
+  <body class="h-full">
+    <div x-data="{ mobileMenuOpen: false }">
+      <div
+        x-show="mobileMenuOpen"
+        class="fixed inset-0 z-40 flex md:hidden"
+        role="dialog"
+        aria-modal="true"
+      >
+        {% render 'sidebar/mobile', current_url: resource.relative_url, collections: collections %}
+      </div>
+
+      <!-- Static sidebar for desktop -->
+      <div class="hidden md:fixed md:inset-y-0 md:flex md:w-64 md:flex-col">
+        {% render 'sidebar/desktop', current_url: resource.relative_url, collections: collections %}
+      </div>
+
+      <div class="flex flex-1 flex-col md:pl-64">
+        <!-- Mobile hamburger menu button -->
+        <div class="sticky top-0 z-10 pl-1 pt-1 sm:pl-3 sm:pt-3 md:hidden">
+          {% render 'sidebar/hamburger_button' %}
+        </div>
+
+        <main>
+          {{ content }}
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
