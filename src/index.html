@@ -1,14 +1,17 @@
 ---
 ---
 
-<section class="max-w-6xl mx-auto bg-gray-800 bg-opacity-70 rounded-md shadow">
-  <div class="max-w-2xl mx-auto text-center py-10 px-4 sm:py-14 sm:px-6 lg:px-8">
+<section class="mx-auto max-w-6xl rounded-md bg-zinc-900 bg-opacity-60 shadow">
+  <div
+    class="mx-auto max-w-2xl px-4 py-10 text-center sm:px-6 sm:py-14 lg:px-8"
+  >
     <h1 class="text-3xl font-extrabold text-white sm:text-4xl">
       <span class="block">Hey, there 👋</span>
       <img
         alt="Stephen Dolan headshot"
-        class="rounded-full h-44 w-44 mx-auto my-5"
-        src="/images/stephen.webp">
+        class="mx-auto my-5 h-44 w-44 rounded-full"
+        src="/images/stephen.webp"
+      />
     </h1>
     <p class="mt-4 text-lg leading-6">
       I'm Stephen,
@@ -16,50 +19,43 @@
         class="underline hover:text-white"
         href="https://tuple.app"
         rel="noopener noreferrer"
-        target="_blank">Tuple</a>'s Chief Operating Officer and
+        target="_blank"
+        >Tuple</a
+      >'s Chief Operating Officer and
       <a
         class="underline hover:text-white"
         href="https://gettingthingsdone.com/what-is-gtd/"
         rel="noopener noreferrer"
-        target="_blank">Getting Things Done</a>
+        target="_blank"
+        >Getting Things Done</a
+      >
       practitioner.
-    </p>
-
-    <p class="mt-4 text-lg leading-6">
-      I'm on the
-      <a
-        class="underline hover:text-white"
-        href="https://luckyframework.org"
-        rel="noopener noreferrer"
-        target="_blank">Lucky Framework</a>
-      core team and created
-      <a
-        class="underline hover:text-white"
-        href="https://luckycasts.com"
-        rel="noopener noreferrer"
-        target="_blank">LuckyCasts</a>.
     </p>
   </div>
 
-  <div class="max-w-xl mx-auto pb-10 grid grid-cols-1 px-6">
-    <a href="/coaching/book" class="text-center rounded-md bg-teal-600 px-7 py-3.5 text-lg font-semibold text-white shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600">
+  <div class="mx-auto grid max-w-xl grid-cols-1 px-6 pb-10">
+    <a
+      href="/coaching/book"
+      class="rounded-md bg-teal-600 px-7 py-3.5 text-center text-lg font-semibold text-white shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600"
+    >
       Get 1-on-1 coaching with me
     </a>
   </div>
 </section>
 
-<section class="max-w-6xl mx-auto mt-6 bg-gray-800 bg-opacity-70 rounded-md shadow">
-  <div class="max-w-2xl mx-auto text-center py-6">
+<section
+  class="mx-auto mt-6 max-w-6xl rounded-md bg-zinc-900 bg-opacity-60 shadow"
+>
+  <div class="mx-auto max-w-2xl py-6 text-center">
     <h2 class="text-lg font-semibold text-white sm:text-xl">
       <span class="block">Here's what I've been up to</span>
     </h2>
   </div>
 
-  <div class="flow-root py-8 px-4">
+  <div class="flow-root px-4 py-8">
     <ul class="" role="list">
-      {% for event in collections.timeline_events.resources %}
-        {% render "timeline_event", event: event, is_last: forloop.last %}
-      {% endfor %}
+      {% for event in collections.timeline_events.resources %} {% render
+      "timeline_event", event: event, is_last: forloop.last %} {% endfor %}
     </ul>
   </div>
 </section>

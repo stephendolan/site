@@ -3,77 +3,96 @@ title: Speaking
 description: A collection of where I've spoken about producivity and optimizing systems.
 ---
 
-<div class="sm:flex justify-between items-center mb-5 ml-2">
-  <h1 class="text-3xl font-bold mb-2 sm:mb-0">Where I'm speaking</h1>
-</div>
-
 {% assign posts = collections.speaking.resources %}
 
-<div class="mt-6 max-w-6xl mx-auto bg-gray-800 bg-opacity-70 rounded-md shadow overflow-hidden">
-  <ul class="divide-y divide-gray-600" role="list">
-    {% for post in posts %}
-      <li>
-        <div class="block">
-          <div class="px-4 py-4 sm:px-6">
-            <div class="min-w-0 flex-1 sm:flex sm:flex-col sm:items-center sm:justify-between">
-              <div class="truncate w-full">
-                <p class="font-medium text-gray-100 truncate">
-                  {{ post.show }}
-                  -
-                  {{ post.title }}
-                </p>
+<div class="rounded-lg bg-zinc-900 bg-opacity-60 py-12 sm:py-16">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl lg:max-w-4xl">
+      <h1 class="text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl">
+        Speaking
+      </h1>
 
-                <div class="mt-2 flex space-x-4">
-                  <div class="w-36 flex items-center text-sm text-gray-400">
-                    <!-- Heroicon name: solid/calendar -->
-                    <svg
-                      aria-hidden="true"
-                      class="flex-shrink-0 mr-1.5 h-5 w-5"
-                      fill="currentColor"
-                      viewbox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        clip-rule="evenodd"
-                        d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                        fill-rule="evenodd" />
-                    </svg>
-                    <p>
-                      <time datetime="{{ post.date }}">{{ post.date | date: "%B %-d, %Y" }}</time>
-                    </p>
-                  </div>
+      <p class="mt-2 text-lg leading-8 text-gray-300">
+        Sometimes I get to talk about productivity and optimizing systems.
+      </p>
 
-                  {% case post.category %}
-                    {% when "productivity" %}
-                    {% assign tag_color = "bg-blue-500" %}
-                    {% assign tag_icon_path = '<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />' %}
-                    {% when "development" %}
-                    {% assign tag_color = "bg-green-500" %}
-                    {% assign tag_icon_path = '<path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />' %}
-                  {% else %}
-                    {% assign tag_color = "bg-gray-500" %}
-                    {% assign tag_icon_path = '<path clip-rule="evenodd" d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z" fill-rule="evenodd"/>' %}
-                  {% endcase %}
+      <ul class="mt-16 divide-y divide-gray-600" role="list">
+        {% for post in posts %}
+        <li>
+          <div class="block">
+            <div class="px-4 py-4 sm:px-6">
+              <div
+                class="min-w-0 flex-1 sm:flex sm:flex-col sm:items-center sm:justify-between"
+              >
+                <div class="w-full truncate">
+                  <p class="truncate font-medium text-gray-100">
+                    {{ post.show }} - {{ post.title }}
+                  </p>
 
-                  <div class="flex items-center text-xs font-light text-gray-200 rounded-md px-2 py-1 {{ tag_color }} bg-opacity-50">
-                    <svg
-                      class="h-4 w-4"
-                      fill="currentColor"
-                      viewbox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg">
-                      {{ tag_icon_path }}
-                    </svg>
-                    <p class="ml-1">{{ post.category }}</p>
+                  <div class="mt-2 flex space-x-4">
+                    <div class="flex w-36 items-center text-sm text-gray-400">
+                      <!-- Heroicon name: solid/calendar -->
+                      <svg
+                        aria-hidden="true"
+                        class="mr-1.5 h-5 w-5 flex-shrink-0"
+                        fill="currentColor"
+                        viewbox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                      <p>
+                        <time datetime="{{ post.date }}"
+                          >{{ post.date | date: "%B %-d, %Y" }}</time
+                        >
+                      </p>
+                    </div>
+
+                    {% case post.category %} {% when "productivity" %} {% assign
+                    tag_color = "bg-blue-500" %} {% assign tag_icon_path =
+                    '<path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />' %} {% when "development" %} {% assign tag_color =
+                    "bg-green-500" %} {% assign tag_icon_path = '<path
+                      fill-rule="evenodd"
+                      d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    />' %} {% else %} {% assign tag_color = "bg-gray-500" %} {%
+                    assign tag_icon_path = '<path
+                      clip-rule="evenodd"
+                      d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z"
+                      fill-rule="evenodd"
+                    />' %} {% endcase %}
+
+                    <div
+                      class="flex items-center text-xs font-light text-gray-200 rounded-md px-2 py-1 {{ tag_color }} bg-opacity-50"
+                    >
+                      <svg
+                        class="h-4 w-4"
+                        fill="currentColor"
+                        viewbox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        {{ tag_icon_path }}
+                      </svg>
+                      <p class="ml-1">{{ post.category }}</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div class="mt-4">
-              {{ post.content }}
+              <div class="mt-4">{{ post.content }}</div>
             </div>
           </div>
-        </div>
-      </li>
-    {% endfor %}
-  </ul>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
 </div>
