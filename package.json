@@ -29,6 +29,6 @@
   },
   "dependencies": {
     "@hotwired/stimulus": "^3.2.2",
-    "alpinejs": "^3.11.1"
+    "alpinejs": "^3.13.2"
   }
 }
