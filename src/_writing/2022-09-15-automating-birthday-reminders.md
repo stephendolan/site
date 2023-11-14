@@ -27,6 +27,7 @@ Once a day, a Google Apps Script runs at ~2 am and combs through my contacts. If
 1. Add birthdays to your contacts in [Google Contacts](https://contacts.google.com/). Make sure not to miss parents, siblings, nieces/nephews, children, and close friends.
 1. Head to [your Google Apps Script dashboard](https://script.google.com/home). Make sure you're logged into the Google account with all of your contacts and their birthdays.
 1. Make a new project.
+1. Click the "+" next to "Services" on the left side of the editor, and add the People API.
 1. Paste in the following script, substituting out the `email_destination` user property for your own [OmniFocus inbox email](https://support.omnigroup.com/omnifocus-mail-drop/):
 
    ```javascript
@@ -46,43 +47,33 @@ Once a day, a Google Apps Script runs at ~2 am and combs through my contacts. If
        "your-omni-address@sync.omnigroup.com",
      );
 
-     let contacts = ContactsApp.getContacts();
+     let contacts = People.People.Connections.list("people/me", {
+       personFields: "names,birthdays",
+     }).connections;
+
      const dateToCheck = dayjs().add(
        userProperties.getProperty("advance_days"),
        "days",
      );
 
-     contacts.forEach((contact) => {
-       let contactBirthday = contact.getDates(ContactsApp.Field.BIRTHDAY)[0];
+     contacts
+       .filter((contact) => contact.birthdays !== undefined)
+       .forEach((contact) => {
+         let contactBirthday = contact.birthdays;
+         let parseableDateString = contactBirthday[0].text;
+         let birthDate = dayjs(parseableDateString, "M/D");
 
-       if (contactBirthday == null) {
-         return;
-       }
+         if (birthDate.format("MM DD") !== dateToCheck.format("MM DD")) {
+           return;
+         }
 
-       // Google's default date on a contact is 1604, so we normalize all null years to that value for consistency.
-       let parseableDateString = `${contactBirthday.getMonth()} ${contactBirthday.getDay()}, ${
-         contactBirthday.getYear() || 1604
-       }`;
-       let birthDate = dayjs(parseableDateString);
+         let recipient = userProperties.getProperty("email_destination");
+         let subject = `Wish ${contact.getFullName()} a happy birthday on ${birthDate.format(
+           "MMMM D",
+         )}.`;
 
-       if (birthDate.format("MM DD") !== dateToCheck.format("MM DD")) {
-         return;
-       }
-
-       let recipient = userProperties.getProperty("email_destination");
-       let subject = `Wish ${contact.getFullName()} a happy birthday on ${birthDate.format(
-         "MMMM D",
-       )}.`;
-
-       let body = "";
-       if (birthDate.get("year") === 1604) {
-         body = "They didn't have a birth year set in your Google Contacts.";
-       } else {
-         body = `They'll be ${dayjs().diff(birthDate, "years") + 1} years old.`;
-       }
-
-       MailApp.sendEmail(recipient, subject, body);
-     });
+         MailApp.sendEmail(recipient, subject, "");
+       });
    }
    ```
 
