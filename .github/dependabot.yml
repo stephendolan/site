@@ -6,19 +6,3 @@ updates:
       interval: "daily"
     open-pull-requests-limit: 5
     target-branch: main
-
-  - package-ecosystem: npm
-    directory: "/"
-    schedule:
-      interval: daily
-    open-pull-requests-limit: 5
-    target-branch: main
-    versioning-strategy: increase
-
-  - package-ecosystem: "bundler"
-    directory: "/"
-    schedule:
-      interval: "monthly"
-    open-pull-requests-limit: 5
-    target-branch: main
-    versioning-strategy: increase
