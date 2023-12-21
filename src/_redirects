@@ -1,3 +1,8 @@
 # Changed our URL generation scheme to use post titles, so we need to redirect previously-linked posts.
 
 /writing/do-you-really-need-that-crm /writing/using-omnifocus-as-a-simple-crm
+
+# Analytics proxy
+
+/js/script.js https://plausible.io/js/script.js 200
+/api/event https://plausible.io/api/event 200

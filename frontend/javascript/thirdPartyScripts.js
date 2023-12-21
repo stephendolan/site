@@ -17,7 +17,7 @@ export const loadAnalytics = () => {
     const script = document.createElement("script");
     script.defer = true;
     script.dataset.domain = "stephendolan.com";
-    script.src = "https://analytics.stephendolan.com/js/script.js";
+    script.src = "/js/script.js";
     script.onload = () => {
       resolve();
     };
