@@ -4,5 +4,5 @@
 
 # Analytics proxy
 
-/js/script.js https://plausible.io/js/script.js 200
-/api/event https://plausible.io/api/event 200
+/js/script.js https://analytics.stephendolan.com/js/script.js 200
+/api/event https://analytics.stephendolan.com/api/event 200
