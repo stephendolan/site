@@ -13,7 +13,10 @@ image: /images/writing/2022-03-31/index.webp
 
 I was perusing Twitter today and came across this question from [Joe Masilotti](https://twitter.com/joemasilotti), the creator of [RailsDevs.com](https://railsdevs.com/):
 
-<blockquote x-data="twitterEmbed" class="twitter-tweet" data-align="center" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">How do bootstrappers manage leads/sales?<br><br>I have contacts all over the place (email, Twitter DMs, Discord, Slack, etc.) and am afraid I&#39;m dropping the ball on following up.<br><br>Is there a simple system to follow (e.g. in Google Sheets)? Or a very small CRM that works well for you?</p>&mdash; Joe Masilotti 📗 (@joemasilotti) <a href="https://twitter.com/joemasilotti/status/1509513582685294593?ref_src=twsrc%5Etfw">March 31, 2022</a></blockquote>
+{% rendercontent "embeds/twitter_post" %}
+
+  <p lang="en" dir="ltr">How do bootstrappers manage leads/sales?<br><br>I have contacts all over the place (email, Twitter DMs, Discord, Slack, etc.) and am afraid I&#39;m dropping the ball on following up.<br><br>Is there a simple system to follow (e.g. in Google Sheets)? Or a very small CRM that works well for you?</p>&mdash; Joe Masilotti 📗 (@joemasilotti) <a href="https://twitter.com/joemasilotti/status/1509513582685294593?ref_src=twsrc%5Etfw">March 31, 2022</a>
+{% endrendercontent %}
 
 At [Tuple](https://tuple.app), we use [Pipedrive](https://pipedrive.com) to manage all of our Enterprise plan deals and renewals. There's no shortage of competitors in the space, and the options can be pretty overwhelming.
 

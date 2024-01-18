@@ -3,7 +3,7 @@ title: "Naming projects when you don't control the outcome"
 description: "Naming projects where you don't directly control the outcome can be challenging. As usual, David Allen's got a better way."
 category: Productivity
 tags:
-  - GTD Principles
+  - Core Principles
 image: /images/writing/2022-04-05/index.webp
 ---
 

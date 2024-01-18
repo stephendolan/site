@@ -6,7 +6,6 @@ category: Productivity
 tags:
   - OmniFocus
 image: /images/writing/2023-08-17/index.webp
-featured: true
 ---
 
 <!-- Include assets like ![Asset]({{ assetPath }}/my-asset.png) -->
