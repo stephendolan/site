@@ -1,12 +1,10 @@
 ---
-series: "Mastering OmniFocus"
 title: 'Due Dates, not "Want to Do" Dates'
 description: "Stop abusing due dates and reduce stresses on your system by asking yourself hard questions."
 category: Productivity
 tags:
   - Core Principles
 image: /images/writing/2024-01-14/index.webp
-featured: true
 ---
 
 <!-- Include assets like ![Asset]({{ assetPath }}/my-asset.png) -->

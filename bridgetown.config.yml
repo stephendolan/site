@@ -23,7 +23,6 @@ defaults:
       collection: "writing"
     values:
       layout: "prose"
-      featured: false
   - values:
       layout: "default"
       image: "/images/stephen.webp"
