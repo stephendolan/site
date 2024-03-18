@@ -1,4 +1,5 @@
 require "bridgetown"
+require 'time'
 
 Bridgetown.load_tasks
 
@@ -37,6 +38,32 @@ namespace :frontend do
     sh "yarn run esbuild-dev"
   rescue Interrupt
   end
+end
+
+# A task that scaffolds out the structure for a new writing post.
+# It creates a new markdown file in the _writing directory with the format YYYY-MM-DD-title.md and correct frontmatter.
+# It also creates a new directory in the assets/images/writing directory with the same name as the post file date.
+task :new_post, [:title] do |t, args|
+  title = args.title || 'new-post'
+  date = Time.now.strftime('%Y-%m-%d')
+  filename = "src/_writing/#{date}-#{title}.md"
+  image_dir = "src/images/writing/#{date}"
+
+  Dir.mkdir(image_dir) unless Dir.exist?(image_dir)
+  File.new("#{image_dir}/.keep", 'w')
+
+  File.open(filename, 'w') do |file|
+    file.write("---\n")
+    file.write("title: \"#{title}\"\n")
+    file.write("description: \"TODO\"\n")
+    file.write("tags:\n")
+    file.write("\s\s- TODO\n")
+    file.write("image: /images/writing/#{date}/index.webp\n")
+    file.write("---\n")
+  end
+
+  puts "Created new post: #{filename}"
+  puts "Created new image directory: #{image_dir}"
 end
 
 #
